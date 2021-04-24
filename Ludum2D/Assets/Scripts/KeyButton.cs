@@ -70,5 +70,9 @@ public class KeyButton : MonoBehaviour
         {
             _isPressed = true;
         }
+        else
+        {
+            _isPressed = false; 
+        }
     }
 }

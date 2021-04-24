@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class KeysPressedController : MonoBehaviour
 {
 
+    public int SecondsToNewKey;
+    
     private List<KeyButton> _keyToPressList;
 
     private int _lastTimeKeyAdded;
@@ -30,7 +32,7 @@ public class KeysPressedController : MonoBehaviour
 
     private void CreateKeyToPressByTime()
     {
-        if (TruncateTime() % 3 == 0 & TruncateTime() != _lastTimeKeyAdded)
+        if (TruncateTime() % SecondsToNewKey == 0 & TruncateTime() != _lastTimeKeyAdded)
         {
             _lastTimeKeyAdded = TruncateTime();
             AddKeyToPress();
@@ -111,17 +113,5 @@ public class KeysPressedController : MonoBehaviour
         return Mathf.FloorToInt(Time.time);
     }
     
-    void OnGUI()
-    {
-        int space = 0;
-        GUI.color = Color.red;
-        foreach (KeyButton key in _keyToPressList)
-        {
-            GUI.Label(new Rect(space, 490, 60, 30), key.Text + "");
-            space += 60;
-        }
-        
 
-
-    }
 }
