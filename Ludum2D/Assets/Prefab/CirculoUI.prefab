@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 956624872899002055}
   - component: {fileID: 956624872899002049}
   - component: {fileID: 956624872899002054}
+  - component: {fileID: 642674221066417892}
   m_Layer: 5
   m_Name: CirculoUI
   m_TagString: Untagged
@@ -224,3 +225,15 @@ MonoBehaviour:
   m_FillOrigin: 2
   m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &642674221066417892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956624872899002052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e578c3d2b4b33d3438a0071439cced66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
