@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [Header("Air Bar")]
     public float AirMaximum;
     public float AirAmount;
-    public float AmountToDecrease;
+    public float DecreasePerSecond;
     public float AirRatio {
         get {
             return AirAmount / AirMaximum;
@@ -36,8 +36,6 @@ public class Player : MonoBehaviour
     {
         Move();
         LoseAir();
-
-
     }
 
     private void Move()
@@ -51,7 +49,7 @@ public class Player : MonoBehaviour
 
     private void LoseAir()
     {
-        AirAmount -= AmountToDecrease * Time.deltaTime;
+        AirAmount -= DecreasePerSecond * Time.deltaTime;
     }
 
     void OnGUI()

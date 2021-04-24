@@ -5,7 +5,7 @@ using UnityEngine;
 public static class GameObjectAccess
 {
     private static Player _player;
-    
+
     public static Player Player
     {
         get

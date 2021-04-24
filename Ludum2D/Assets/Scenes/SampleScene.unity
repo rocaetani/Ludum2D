@@ -330,28 +330,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 56299016}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &94629005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7736575859740596728, guid: 7b3d91504c19b3347bd9ed176fed9fba,
-    type: 3}
-  m_PrefabInstance: {fileID: 901597073}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &94629009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94629005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab189c5772795ce4fbeaef76baf1ed35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Velocity: 0
-  AirMaximum: 100
-  AirAmount: 100
-  AmountToDecrease: 1
 --- !u!1001 &129412670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1824,11 +1802,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7736575859740596728, guid: 7b3d91504c19b3347bd9ed176fed9fba,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 7736575859740596730, guid: 7b3d91504c19b3347bd9ed176fed9fba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1883,11 +1856,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7736575859740596731, guid: 7b3d91504c19b3347bd9ed176fed9fba,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b3d91504c19b3347bd9ed176fed9fba, type: 3}
