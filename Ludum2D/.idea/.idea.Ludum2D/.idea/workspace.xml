@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cc1139b-63f0-4db1-8ba4-b98eb1492f45" name="Default Changelist" comment="" />
+    <list default="true" id="7cc1139b-63f0-4db1-8ba4-b98eb1492f45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerFalling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerFalling.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +15,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BackgroundChange.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
-                <marker date="1619235792764" expanded="true" signature="6:78" ph="..." />
-                <marker date="1619235792764" expanded="true" signature="125:486" ph="{...}" />
-                <marker date="1619235792764" expanded="true" signature="274:295" ph="{...}" />
-                <marker date="1619235792764" expanded="true" signature="353:484" ph="{...}" />
-                <marker date="1619235792764" expanded="true" signature="403:477" ph="{...}" />
+                <marker date="1619236850074" expanded="true" signature="6:78" ph="..." />
+                <marker date="1619236850074" expanded="true" signature="125:486" ph="{...}" />
+                <marker date="1619236850074" expanded="true" signature="274:295" ph="{...}" />
+                <marker date="1619236850074" expanded="true" signature="353:484" ph="{...}" />
+                <marker date="1619236850074" expanded="true" signature="403:477" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -29,12 +31,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFalling.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="195">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding>
                 <marker date="1619236218303" expanded="false" signature="6:78" ph="..." />
-                <marker date="1619236218303" expanded="true" signature="122:295" ph="{...}" />
-                <marker date="1619236218303" expanded="true" signature="209:293" ph="{...}" />
+                <marker date="1619236218303" expanded="true" signature="122:356" ph="{...}" />
+                <marker date="1619236218303" expanded="true" signature="248:354" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -98,6 +100,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -141,12 +144,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619235301689</updated>
-      <workItem from="1619235306215" duration="912000" />
+      <workItem from="1619235306215" duration="1811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="912000" />
+    <option name="totallyTimeSpent" value="1811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -209,26 +212,26 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BackgroundChange.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-            <marker date="1619235792764" expanded="true" signature="6:78" ph="..." />
-            <marker date="1619235792764" expanded="true" signature="125:486" ph="{...}" />
-            <marker date="1619235792764" expanded="true" signature="274:295" ph="{...}" />
-            <marker date="1619235792764" expanded="true" signature="353:484" ph="{...}" />
-            <marker date="1619235792764" expanded="true" signature="403:477" ph="{...}" />
+            <marker date="1619236850074" expanded="true" signature="6:78" ph="..." />
+            <marker date="1619236850074" expanded="true" signature="125:486" ph="{...}" />
+            <marker date="1619236850074" expanded="true" signature="274:295" ph="{...}" />
+            <marker date="1619236850074" expanded="true" signature="353:484" ph="{...}" />
+            <marker date="1619236850074" expanded="true" signature="403:477" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerFalling.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="195">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <marker date="1619236218303" expanded="false" signature="6:78" ph="..." />
-            <marker date="1619236218303" expanded="true" signature="122:295" ph="{...}" />
-            <marker date="1619236218303" expanded="true" signature="209:293" ph="{...}" />
+            <marker date="1619236218303" expanded="true" signature="122:356" ph="{...}" />
+            <marker date="1619236218303" expanded="true" signature="248:354" ph="{...}" />
           </folding>
         </state>
       </provider>
