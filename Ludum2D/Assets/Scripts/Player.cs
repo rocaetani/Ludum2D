@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.color = Color.yellow;
+        GUI.color = Color.red;
         
        
         
