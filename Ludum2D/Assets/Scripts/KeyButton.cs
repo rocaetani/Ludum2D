@@ -17,6 +17,8 @@ public class KeyButton : MonoBehaviour
     public Sprite buttonNotPressed;
     public Sprite buttonPressed;
     
+    public float AmountTo
+    
     private bool _isPressed;
     private bool _isToPress;
     private bool _isFastPress;
@@ -30,6 +32,8 @@ public class KeyButton : MonoBehaviour
 
         ButtonImage = GetComponentInChildren<Image>();
 
+        ButtonImage.enabled = false;
+        Text.enabled = false;
 
         String keyString = key + "";
         keyString = keyString.Replace("Alpha", "");
@@ -46,10 +50,14 @@ public class KeyButton : MonoBehaviour
             {
                 GameObjectAccess.Player.AmountToDecrease += 1;
                 ButtonImage.sprite = buttonNotPressed;
+                ButtonImage.enabled = true;
+                Text.enabled = true;
             }
             else
             {
                 ButtonImage.sprite = buttonPressed;
+                ButtonImage.enabled = true;
+                Text.enabled = true;
             }
         }
     }
@@ -64,6 +72,8 @@ public class KeyButton : MonoBehaviour
        return (int) key;
     }
 
+    
+    
     public void VerifyIsPressed()
     {
         if (Input.GetKey(key))
