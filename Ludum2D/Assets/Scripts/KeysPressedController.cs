@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class KeysPressedContorller : MonoBehaviour
+public class KeysPressedController : MonoBehaviour
 {
 
-    private List<KeyCode> _keyToPressList;
+    private List<KeyButton> _keyToPressList;
 
     private int _lastTimeKeyAdded;
 
@@ -16,18 +16,16 @@ public class KeysPressedContorller : MonoBehaviour
     private List<KeyButton> _freeRightKeyList;
     void Start()
     {
-        _keyToPressList = new List<KeyCode>();
+        _keyToPressList = new List<KeyButton>();
         _freeLeftKeyList = new List<KeyButton>();
         _freeRightKeyList = new List<KeyButton>();
         InitFreeKeysLists();
-
     }
 
     //48-57  97-122
     void Update()
     {
-        
-        //CreateKeyToPressByTime();
+        CreateKeyToPressByTime();
     }
 
     private void CreateKeyToPressByTime()
@@ -40,39 +38,43 @@ public class KeysPressedContorller : MonoBehaviour
     }
 
     // 0-36  Numeros e Letras
-    public KeyCode RandomizeKey()
+    public KeyButton RandomizeKey()
     {
-        int i = Random.Range(0, _freeKeyList.Count);
-        int freeKey = _freeKeyList[i].IntKey();
-        _freeKeyList.RemoveAt(i);
+        int i = Random.Range(0, _freeLeftKeyList.Count + _freeRightKeyList.Count);
+        KeyButton freeKey;
+        if (i < _freeLeftKeyList.Count)
+        {
+            freeKey = _freeLeftKeyList[i];
+            _freeLeftKeyList.RemoveAt(i);
+        }
+        else
+        {
+            i -= _freeLeftKeyList.Count;
+            freeKey = _freeRightKeyList[i];
+            _freeRightKeyList.RemoveAt(i);
+        }
         
-        return (KeyCode) (freeKey);
+        return freeKey;
     }
 
     public void ReleaseKeyToPress(KeyButton keyButton)
     {
-        _freeKeyList.Add(keyButton);
+        if (VerifyButtonSide(keyButton.key))
+        {
+            _freeLeftKeyList.Add(keyButton);
+        }
+        else
+        {
+            _freeRightKeyList.Add(keyButton);
+        }
     }
-
-    public bool AlreadyInListToPress(KeyCode keyCode)
-    {  
-        return _keyToPressList.Contains(keyCode);
-    }
+    
 
     public void AddKeyToPress()
     {
-        KeyCode keyCode = RandomizeKey();
-        _keyToPressList.Add(keyCode);
-    }
-    
-    public void AddKeyToPress(KeyCode keyCode)
-    {
-        _keyToPressList.Add(keyCode);
-    }
-    
-    public void RemoveKeyToPress(KeyCode keyCode)
-    {
-        _keyToPressList.Remove(keyCode);
+        KeyButton key = RandomizeKey();
+        key.SetToPress();
+        _keyToPressList.Add(key);
     }
 
     private void InitFreeKeysLists()
@@ -113,9 +115,9 @@ public class KeysPressedContorller : MonoBehaviour
     {
         int space = 0;
         GUI.color = Color.red;
-        foreach (KeyCode key in _keyToPressList)
+        foreach (KeyButton key in _keyToPressList)
         {
-            GUI.Label(new Rect(space, 490, 60, 30), key + "");
+            GUI.Label(new Rect(space, 490, 60, 30), key.Text + "");
             space += 60;
         }
         

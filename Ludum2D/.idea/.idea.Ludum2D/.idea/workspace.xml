@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc1139b-63f0-4db1-8ba4-b98eb1492f45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonActivated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonActivated.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonNotPressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonNotPressed.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonPressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/buttonPressed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/DepthMeter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/DepthMeter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Bangers-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Bangers-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Bangers-Regular SDFTeste.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Bangers-Regular SDFTeste.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/KeyButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/KeyButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DepthMeterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DepthMeterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeyButtonsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeyButtonsController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeysPressed.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeysPressed.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/botaoAtivo_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/KeyButtons/botaoAtivo_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,76 +41,69 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-311">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="23" />
-              <folding>
-                <marker date="1619287063210" expanded="false" signature="6:110" ph="..." />
-                <marker date="1619287063210" expanded="true" signature="147:1413" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="423:493" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="551:600" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="625:809" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="676:733" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="837:1011" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="909:1005" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="1046:1095" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="1127:1183" ph="{...}" />
-                <marker date="1619287063210" expanded="true" signature="1201:1406" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeyButton.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
-              <folding>
-                <marker date="1619287063202" expanded="true" signature="6:155" ph="..." />
-                <marker date="1619287063202" expanded="true" signature="195:1426" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="563:805" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="863:1232" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="920:1216" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="959:1106" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="1123:1204" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="1258:1295" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="1330:1424" ph="{...}" />
-                <marker date="1619287063202" expanded="true" signature="1367:1418" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="259">
               <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
-                <marker date="1619288493407" expanded="true" signature="6:127" ph="..." />
-                <marker date="1619288493407" expanded="true" signature="179:2773" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="377:567" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="606:663" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="706:890" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="787:884" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="955:1147" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1203:1252" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1307:1371" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1404:1496" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1548:1598" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1653:1706" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1744:2075" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1828:2069" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1887:1964" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="1981:2059" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="2163:2427" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="2353:2398" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="2459:2515" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="2537:2771" ph="{...}" />
-                <marker date="1619288493407" expanded="true" signature="2646:2754" ph="{...}" />
+                <marker date="1619294756578" expanded="false" signature="6:110" ph="..." />
+                <marker date="1619294756578" expanded="true" signature="147:1195" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeyButton.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+              <folding>
+                <marker date="1619294757427" expanded="true" signature="6:155" ph="..." />
+                <marker date="1619294757427" expanded="true" signature="195:1507" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="556:832" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="890:1245" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="947:1239" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="986:1132" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1149:1229" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1275:1314" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1339:1376" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1411:1505" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1448:1499" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+              <folding>
+                <marker date="1619294757427" expanded="false" signature="6:127" ph="..." />
+                <marker date="1619294757427" expanded="true" signature="179:2891" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="379:570" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="609:655" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="698:882" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="779:876" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="949:1410" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1105:1210" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1223:1371" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1466:1667" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1517:1582" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1595:1661" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1705:1817" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1855:2186" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1939:2180" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="1998:2075" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2092:2170" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2274:2538" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2464:2509" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2570:2626" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2648:2889" ph="{...}" />
+                <marker date="1619294757427" expanded="true" signature="2759:2872" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -147,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="225">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <marker date="1619287063204" expanded="false" signature="6:78" ph="..." />
                 <marker date="1619287063204" expanded="true" signature="116:409" ph="{...}" />
@@ -162,19 +143,28 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Z</find>
+      <find>DiamondsText</find>
+      <find>W</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/OneDrive/Documentos/UnityProjects/2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DepthMeterController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BackgroundChange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/OneDrive/Documentos/UnityProjects/2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Curso de Jogos Digitais/Inteligencia Artificial/Trabalho2/Assets/Scripts/GameControllers/MenuController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/60/a6b9e33a/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../BoardTaticGame/Assets/Scripts/Helpers/GameObjectsAccess.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../BoardTaticGame/Assets/Scripts/GameControllers/MatchController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,9 +175,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KeysPressed.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DepthMeterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/KeyButton.cs" />
       </list>
     </option>
   </component>
@@ -276,12 +267,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619235301689</updated>
-      <workItem from="1619235306215" duration="29212000" />
+      <workItem from="1619235306215" duration="35167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29212000" />
+    <option name="totallyTimeSpent" value="35167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +285,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
@@ -394,17 +384,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/60/a6b9e33a/KeyCode.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
+        <state relative-caret-position="259">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <marker date="1619294756578" expanded="false" signature="6:110" ph="..." />
+            <marker date="1619294756578" expanded="true" signature="147:1195" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../BoardTaticGame/Assets/Scripts/GameControllers/MatchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Curso de Jogos Digitais/Inteligencia Artificial/Trabalho2/Assets/Scripts/GameControllers/MenuController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="260" column="63" selection-start-line="260" selection-start-column="58" selection-end-line="260" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#162#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameObjectAccess.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="225">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
             <marker date="1619287063204" expanded="false" signature="6:78" ph="..." />
             <marker date="1619287063204" expanded="true" signature="116:409" ph="{...}" />
@@ -429,71 +449,392 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/60/a6b9e33a/KeyCode.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="286" column="18" selection-start-line="286" selection-start-column="17" selection-end-line="286" selection-end-column="18" />
+          <folding>
+            <marker date="1619247513614" expanded="true" signature="0:347" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1619247513614" expanded="true" signature="370:40325" ph="{...}" />
+            <marker date="1619247513614" expanded="true" signature="375:517" ph="///   &lt;para&gt;Key codes returned by Event.keyCode. These map directly to a physical key on the keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="539:40323" ph="{...}" />
+            <marker date="1619247513614" expanded="true" signature="548:663" ph="///   &lt;para&gt;Not assigned (never returned as the result of a keystroke).&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="682:756" ph="///   &lt;para&gt;The backspace key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="780:848" ph="///   &lt;para&gt;The tab key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="866:936" ph="///   &lt;para&gt;The Clear key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="971:1038" ph="///   &lt;para&gt;Return key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1074:1151" ph="///   &lt;para&gt;Pause on PC machines.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1186:1253" ph="///   &lt;para&gt;Escape key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1289:1355" ph="///   &lt;para&gt;Space key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1390:1471" ph="///   &lt;para&gt;Exclamation mark key '!'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1508:1585" ph="///   &lt;para&gt;Double quote key '&quot;'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1626:1695" ph="///   &lt;para&gt;Hash key '##'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1729:1805" ph="///   &lt;para&gt;Dollar sign key '$'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1841:1913" ph="///   &lt;para&gt;Percent '%' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="1950:2028" ph="///   &lt;para&gt;Ampersand key '&amp;amp;'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2067:2135" ph="///   &lt;para&gt;Quote key '.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2170:2251" ph="///   &lt;para&gt;Left Parenthesis key '('.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2290:2372" ph="///   &lt;para&gt;Right Parenthesis key ')'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2412:2485" ph="///   &lt;para&gt;Asterisk key '*'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2523:2592" ph="///   &lt;para&gt;Plus key '+'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2626:2696" ph="///   &lt;para&gt;Comma ',' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2731:2801" ph="///   &lt;para&gt;Minus '-' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2836:2907" ph="///   &lt;para&gt;Period '.' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="2943:3013" ph="///   &lt;para&gt;Slash '/' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3048:3156" ph="///   &lt;para&gt;The '0' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3192:3300" ph="///   &lt;para&gt;The '1' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3336:3444" ph="///   &lt;para&gt;The '2' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3480:3588" ph="///   &lt;para&gt;The '3' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3624:3732" ph="///   &lt;para&gt;The '4' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3768:3876" ph="///   &lt;para&gt;The '5' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="3912:4020" ph="///   &lt;para&gt;The '6' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4056:4164" ph="///   &lt;para&gt;The '7' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4200:4308" ph="///   &lt;para&gt;The '8' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4344:4452" ph="///   &lt;para&gt;The '9' key on the top of the alphanumeric keyboard.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4488:4558" ph="///   &lt;para&gt;Colon ':' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4593:4667" ph="///   &lt;para&gt;Semicolon ';' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4706:4783" ph="///   &lt;para&gt;Less than '&amp;lt;' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4817:4888" ph="///   &lt;para&gt;Equals '=' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="4924:5004" ph="///   &lt;para&gt;Greater than '&amp;gt;' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5041:5119" ph="///   &lt;para&gt;Question mark '?' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5157:5224" ph="///   &lt;para&gt;At key '@'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5256:5340" ph="///   &lt;para&gt;Left square bracket key '['.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5381:5455" ph="///   &lt;para&gt;Backslash key '\'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5494:5579" ph="///   &lt;para&gt;Right square bracket key ']'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5621:5691" ph="///   &lt;para&gt;Caret key '^'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5726:5801" ph="///   &lt;para&gt;Underscore '_' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5841:5916" ph="///   &lt;para&gt;Back quote key '`'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="5955:6019" ph="///   &lt;para&gt;'a' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6050:6114" ph="///   &lt;para&gt;'b' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6145:6209" ph="///   &lt;para&gt;'c' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6240:6304" ph="///   &lt;para&gt;'d' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6336:6400" ph="///   &lt;para&gt;'e' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6432:6496" ph="///   &lt;para&gt;'f' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6528:6592" ph="///   &lt;para&gt;'g' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6624:6688" ph="///   &lt;para&gt;'h' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6720:6784" ph="///   &lt;para&gt;'i' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6816:6880" ph="///   &lt;para&gt;'j' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="6912:6976" ph="///   &lt;para&gt;'k' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7008:7072" ph="///   &lt;para&gt;'l' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7104:7168" ph="///   &lt;para&gt;'m' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7200:7264" ph="///   &lt;para&gt;'n' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7296:7360" ph="///   &lt;para&gt;'o' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7392:7456" ph="///   &lt;para&gt;'p' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7488:7552" ph="///   &lt;para&gt;'q' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7584:7648" ph="///   &lt;para&gt;'r' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7680:7744" ph="///   &lt;para&gt;'s' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7776:7840" ph="///   &lt;para&gt;'t' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7872:7936" ph="///   &lt;para&gt;'u' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="7968:8032" ph="///   &lt;para&gt;'v' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8064:8128" ph="///   &lt;para&gt;'w' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8160:8224" ph="///   &lt;para&gt;'x' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8256:8320" ph="///   &lt;para&gt;'y' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8352:8416" ph="///   &lt;para&gt;'z' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8448:8531" ph="///   &lt;para&gt;Left curly bracket key '{'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8578:8647" ph="///   &lt;para&gt;Pipe '|' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8682:8766" ph="///   &lt;para&gt;Right curly bracket key '}'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8814:8884" ph="///   &lt;para&gt;Tilde '~' key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="8920:8999" ph="///   &lt;para&gt;The forward delete key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9036:9109" ph="///   &lt;para&gt;Numeric keypad 0.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9147:9220" ph="///   &lt;para&gt;Numeric keypad 1.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9258:9331" ph="///   &lt;para&gt;Numeric keypad 2.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9369:9442" ph="///   &lt;para&gt;Numeric keypad 3.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9480:9553" ph="///   &lt;para&gt;Numeric keypad 4.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9591:9664" ph="///   &lt;para&gt;Numeric keypad 5.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9702:9775" ph="///   &lt;para&gt;Numeric keypad 6.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9813:9886" ph="///   &lt;para&gt;Numeric keypad 7.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="9924:9997" ph="///   &lt;para&gt;Numeric keypad 8.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10035:10108" ph="///   &lt;para&gt;Numeric keypad 9.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10146:10221" ph="///   &lt;para&gt;Numeric keypad '.'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10264:10339" ph="///   &lt;para&gt;Numeric keypad '/'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10382:10457" ph="///   &lt;para&gt;Numeric keypad '*'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10502:10577" ph="///   &lt;para&gt;Numeric keypad '-'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10619:10694" ph="///   &lt;para&gt;Numeric keypad '+'.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10735:10812" ph="///   &lt;para&gt;Numeric keypad Enter.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10854:10929" ph="///   &lt;para&gt;Numeric keypad '='.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="10972:11041" ph="///   &lt;para&gt;Up arrow key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11079:11150" ph="///   &lt;para&gt;Down arrow key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11190:11262" ph="///   &lt;para&gt;Right arrow key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11303:11374" ph="///   &lt;para&gt;Left arrow key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11414:11485" ph="///   &lt;para&gt;Insert key key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11522:11587" ph="///   &lt;para&gt;Home key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11622:11686" ph="///   &lt;para&gt;End key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11720:11784" ph="///   &lt;para&gt;Page up.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11821:11887" ph="///   &lt;para&gt;Page down.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="11926:11998" ph="///   &lt;para&gt;F1 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12031:12103" ph="///   &lt;para&gt;F2 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12136:12208" ph="///   &lt;para&gt;F3 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12241:12313" ph="///   &lt;para&gt;F4 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12346:12418" ph="///   &lt;para&gt;F5 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12451:12523" ph="///   &lt;para&gt;F6 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12556:12628" ph="///   &lt;para&gt;F7 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12661:12733" ph="///   &lt;para&gt;F8 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12766:12838" ph="///   &lt;para&gt;F9 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12871:12944" ph="///   &lt;para&gt;F10 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="12978:13051" ph="///   &lt;para&gt;F11 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13085:13158" ph="///   &lt;para&gt;F12 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13192:13265" ph="///   &lt;para&gt;F13 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13299:13372" ph="///   &lt;para&gt;F14 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13406:13479" ph="///   &lt;para&gt;F15 function key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13513:13581" ph="///   &lt;para&gt;Numlock key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13619:13688" ph="///   &lt;para&gt;Capslock key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13727:13799" ph="///   &lt;para&gt;Scroll lock key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13840:13912" ph="///   &lt;para&gt;Right shift key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="13953:14024" ph="///   &lt;para&gt;Left shift key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14064:14138" ph="///   &lt;para&gt;Right Control key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14181:14254" ph="///   &lt;para&gt;Left Control key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14296:14366" ph="///   &lt;para&gt;Right Alt key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14405:14474" ph="///   &lt;para&gt;Left Alt key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14512:14586" ph="///   &lt;para&gt;Right Command key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14627:14701" ph="///   &lt;para&gt;Right Command key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14744:14817" ph="///   &lt;para&gt;Left Command key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14857:14930" ph="///   &lt;para&gt;Left Command key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="14972:15045" ph="///   &lt;para&gt;Left Windows key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15087:15161" ph="///   &lt;para&gt;Right Windows key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15204:15271" ph="///   &lt;para&gt;Alt Gr key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15307:15372" ph="///   &lt;para&gt;Help key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15407:15473" ph="///   &lt;para&gt;Print key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15509:15577" ph="///   &lt;para&gt;Sys Req key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15614:15680" ph="///   &lt;para&gt;Break key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15716:15781" ph="///   &lt;para&gt;Menu key.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15816:15907" ph="///   &lt;para&gt;The Left (or primary) mouse button.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="15944:16047" ph="///   &lt;para&gt;Right mouse button (or secondary mouse button).&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16084:16178" ph="///   &lt;para&gt;Middle mouse button (or third button).&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16215:16304" ph="///   &lt;para&gt;Additional (fourth) mouse button.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16341:16429" ph="///   &lt;para&gt;Additional (fifth) mouse button.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16466:16557" ph="///   &lt;para&gt;Additional (or sixth) mouse button.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16594:16687" ph="///   &lt;para&gt;Additional (or seventh) mouse button.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16724:16805" ph="///   &lt;para&gt;Button 0 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16851:16932" ph="///   &lt;para&gt;Button 1 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="16978:17059" ph="///   &lt;para&gt;Button 2 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17105:17186" ph="///   &lt;para&gt;Button 3 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17232:17313" ph="///   &lt;para&gt;Button 4 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17359:17440" ph="///   &lt;para&gt;Button 5 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17486:17567" ph="///   &lt;para&gt;Button 6 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17613:17694" ph="///   &lt;para&gt;Button 7 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17740:17821" ph="///   &lt;para&gt;Button 8 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17867:17948" ph="///   &lt;para&gt;Button 9 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="17994:18076" ph="///   &lt;para&gt;Button 10 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18123:18205" ph="///   &lt;para&gt;Button 11 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18252:18334" ph="///   &lt;para&gt;Button 12 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18381:18463" ph="///   &lt;para&gt;Button 13 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18510:18592" ph="///   &lt;para&gt;Button 14 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18639:18721" ph="///   &lt;para&gt;Button 15 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18768:18850" ph="///   &lt;para&gt;Button 16 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="18897:18979" ph="///   &lt;para&gt;Button 17 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19026:19108" ph="///   &lt;para&gt;Button 18 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19155:19237" ph="///   &lt;para&gt;Button 19 on any joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19284:19367" ph="///   &lt;para&gt;Button 0 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19414:19497" ph="///   &lt;para&gt;Button 1 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19544:19627" ph="///   &lt;para&gt;Button 2 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19674:19757" ph="///   &lt;para&gt;Button 3 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19804:19887" ph="///   &lt;para&gt;Button 4 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="19934:20017" ph="///   &lt;para&gt;Button 5 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20064:20147" ph="///   &lt;para&gt;Button 6 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20194:20277" ph="///   &lt;para&gt;Button 7 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20324:20407" ph="///   &lt;para&gt;Button 8 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20454:20537" ph="///   &lt;para&gt;Button 9 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20584:20668" ph="///   &lt;para&gt;Button 10 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20716:20800" ph="///   &lt;para&gt;Button 11 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20848:20932" ph="///   &lt;para&gt;Button 12 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="20980:21064" ph="///   &lt;para&gt;Button 13 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21112:21196" ph="///   &lt;para&gt;Button 14 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21244:21328" ph="///   &lt;para&gt;Button 15 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21376:21460" ph="///   &lt;para&gt;Button 16 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21508:21592" ph="///   &lt;para&gt;Button 17 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21640:21724" ph="///   &lt;para&gt;Button 18 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21772:21856" ph="///   &lt;para&gt;Button 19 on first joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="21904:21988" ph="///   &lt;para&gt;Button 0 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22035:22119" ph="///   &lt;para&gt;Button 1 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22166:22250" ph="///   &lt;para&gt;Button 2 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22297:22381" ph="///   &lt;para&gt;Button 3 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22428:22512" ph="///   &lt;para&gt;Button 4 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22559:22643" ph="///   &lt;para&gt;Button 5 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22690:22774" ph="///   &lt;para&gt;Button 6 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22821:22905" ph="///   &lt;para&gt;Button 7 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="22952:23036" ph="///   &lt;para&gt;Button 8 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23083:23167" ph="///   &lt;para&gt;Button 9 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23214:23299" ph="///   &lt;para&gt;Button 10 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23347:23432" ph="///   &lt;para&gt;Button 11 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23480:23565" ph="///   &lt;para&gt;Button 12 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23613:23698" ph="///   &lt;para&gt;Button 13 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23746:23831" ph="///   &lt;para&gt;Button 14 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="23879:23964" ph="///   &lt;para&gt;Button 15 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24012:24097" ph="///   &lt;para&gt;Button 16 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24145:24230" ph="///   &lt;para&gt;Button 17 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24278:24363" ph="///   &lt;para&gt;Button 18 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24411:24496" ph="///   &lt;para&gt;Button 19 on second joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24544:24627" ph="///   &lt;para&gt;Button 0 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24674:24757" ph="///   &lt;para&gt;Button 1 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24804:24887" ph="///   &lt;para&gt;Button 2 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="24934:25017" ph="///   &lt;para&gt;Button 3 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25064:25147" ph="///   &lt;para&gt;Button 4 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25194:25277" ph="///   &lt;para&gt;Button 5 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25324:25407" ph="///   &lt;para&gt;Button 6 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25454:25537" ph="///   &lt;para&gt;Button 7 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25584:25667" ph="///   &lt;para&gt;Button 8 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25714:25797" ph="///   &lt;para&gt;Button 9 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25844:25928" ph="///   &lt;para&gt;Button 10 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="25976:26060" ph="///   &lt;para&gt;Button 11 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26108:26192" ph="///   &lt;para&gt;Button 12 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26240:26324" ph="///   &lt;para&gt;Button 13 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26372:26456" ph="///   &lt;para&gt;Button 14 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26504:26588" ph="///   &lt;para&gt;Button 15 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26636:26720" ph="///   &lt;para&gt;Button 16 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26768:26852" ph="///   &lt;para&gt;Button 17 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="26900:26984" ph="///   &lt;para&gt;Button 18 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27032:27116" ph="///   &lt;para&gt;Button 19 on third joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27164:27247" ph="///   &lt;para&gt;Button 0 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27294:27377" ph="///   &lt;para&gt;Button 1 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27424:27507" ph="///   &lt;para&gt;Button 2 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27554:27637" ph="///   &lt;para&gt;Button 3 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27684:27767" ph="///   &lt;para&gt;Button 4 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27814:27897" ph="///   &lt;para&gt;Button 5 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="27944:28027" ph="///   &lt;para&gt;Button 6 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28074:28157" ph="///   &lt;para&gt;Button 7 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28204:28287" ph="///   &lt;para&gt;Button 8 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28334:28417" ph="///   &lt;para&gt;Button 9 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28464:28548" ph="///   &lt;para&gt;Button 10 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28596:28680" ph="///   &lt;para&gt;Button 11 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28728:28812" ph="///   &lt;para&gt;Button 12 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28860:28944" ph="///   &lt;para&gt;Button 13 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="28992:29076" ph="///   &lt;para&gt;Button 14 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29124:29208" ph="///   &lt;para&gt;Button 15 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29256:29340" ph="///   &lt;para&gt;Button 16 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29388:29472" ph="///   &lt;para&gt;Button 17 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29520:29604" ph="///   &lt;para&gt;Button 18 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29652:29736" ph="///   &lt;para&gt;Button 19 on forth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29784:29867" ph="///   &lt;para&gt;Button 0 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="29914:29997" ph="///   &lt;para&gt;Button 1 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30044:30127" ph="///   &lt;para&gt;Button 2 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30174:30257" ph="///   &lt;para&gt;Button 3 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30304:30387" ph="///   &lt;para&gt;Button 4 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30434:30517" ph="///   &lt;para&gt;Button 5 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30564:30647" ph="///   &lt;para&gt;Button 6 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30694:30777" ph="///   &lt;para&gt;Button 7 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30824:30907" ph="///   &lt;para&gt;Button 8 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="30954:31037" ph="///   &lt;para&gt;Button 9 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31084:31168" ph="///   &lt;para&gt;Button 10 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31216:31300" ph="///   &lt;para&gt;Button 11 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31348:31432" ph="///   &lt;para&gt;Button 12 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31480:31564" ph="///   &lt;para&gt;Button 13 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31612:31696" ph="///   &lt;para&gt;Button 14 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31744:31828" ph="///   &lt;para&gt;Button 15 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="31876:31960" ph="///   &lt;para&gt;Button 16 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32008:32092" ph="///   &lt;para&gt;Button 17 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32140:32224" ph="///   &lt;para&gt;Button 18 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32272:32356" ph="///   &lt;para&gt;Button 19 on fifth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32404:32487" ph="///   &lt;para&gt;Button 0 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32534:32617" ph="///   &lt;para&gt;Button 1 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32664:32747" ph="///   &lt;para&gt;Button 2 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32794:32877" ph="///   &lt;para&gt;Button 3 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="32924:33007" ph="///   &lt;para&gt;Button 4 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33054:33137" ph="///   &lt;para&gt;Button 5 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33184:33267" ph="///   &lt;para&gt;Button 6 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33314:33397" ph="///   &lt;para&gt;Button 7 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33444:33527" ph="///   &lt;para&gt;Button 8 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33574:33657" ph="///   &lt;para&gt;Button 9 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33704:33788" ph="///   &lt;para&gt;Button 10 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33836:33920" ph="///   &lt;para&gt;Button 11 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="33968:34052" ph="///   &lt;para&gt;Button 12 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34100:34184" ph="///   &lt;para&gt;Button 13 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34232:34316" ph="///   &lt;para&gt;Button 14 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34364:34448" ph="///   &lt;para&gt;Button 15 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34496:34580" ph="///   &lt;para&gt;Button 16 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34628:34712" ph="///   &lt;para&gt;Button 17 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34760:34844" ph="///   &lt;para&gt;Button 18 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="34892:34976" ph="///   &lt;para&gt;Button 19 on sixth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35024:35109" ph="///   &lt;para&gt;Button 0 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35156:35241" ph="///   &lt;para&gt;Button 1 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35288:35373" ph="///   &lt;para&gt;Button 2 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35420:35505" ph="///   &lt;para&gt;Button 3 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35552:35637" ph="///   &lt;para&gt;Button 4 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35684:35769" ph="///   &lt;para&gt;Button 5 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35816:35901" ph="///   &lt;para&gt;Button 6 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="35948:36033" ph="///   &lt;para&gt;Button 7 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36080:36165" ph="///   &lt;para&gt;Button 8 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36212:36297" ph="///   &lt;para&gt;Button 9 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36344:36430" ph="///   &lt;para&gt;Button 10 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36478:36564" ph="///   &lt;para&gt;Button 11 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36612:36698" ph="///   &lt;para&gt;Button 12 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36746:36832" ph="///   &lt;para&gt;Button 13 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="36880:36966" ph="///   &lt;para&gt;Button 14 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37014:37100" ph="///   &lt;para&gt;Button 15 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37148:37234" ph="///   &lt;para&gt;Button 16 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37282:37368" ph="///   &lt;para&gt;Button 17 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37416:37502" ph="///   &lt;para&gt;Button 18 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37550:37636" ph="///   &lt;para&gt;Button 19 on seventh joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37684:37768" ph="///   &lt;para&gt;Button 0 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37815:37899" ph="///   &lt;para&gt;Button 1 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="37946:38030" ph="///   &lt;para&gt;Button 2 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38077:38161" ph="///   &lt;para&gt;Button 3 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38208:38292" ph="///   &lt;para&gt;Button 4 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38339:38423" ph="///   &lt;para&gt;Button 5 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38470:38554" ph="///   &lt;para&gt;Button 6 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38601:38685" ph="///   &lt;para&gt;Button 7 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38732:38816" ph="///   &lt;para&gt;Button 8 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38863:38947" ph="///   &lt;para&gt;Button 9 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="38994:39079" ph="///   &lt;para&gt;Button 10 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39127:39212" ph="///   &lt;para&gt;Button 11 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39260:39345" ph="///   &lt;para&gt;Button 12 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39393:39478" ph="///   &lt;para&gt;Button 13 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39526:39611" ph="///   &lt;para&gt;Button 14 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39659:39744" ph="///   &lt;para&gt;Button 15 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39792:39877" ph="///   &lt;para&gt;Button 16 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="39925:40010" ph="///   &lt;para&gt;Button 17 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="40058:40143" ph="///   &lt;para&gt;Button 18 on eighth joystick.&lt;/para&gt; ... " />
+            <marker date="1619247513614" expanded="true" signature="40191:40276" ph="///   &lt;para&gt;Button 19 on eighth joystick.&lt;/para&gt; ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <marker date="1619294757427" expanded="false" signature="6:127" ph="..." />
+            <marker date="1619294757427" expanded="true" signature="179:2891" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="379:570" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="609:655" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="698:882" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="779:876" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="949:1410" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1105:1210" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1223:1371" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1466:1667" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1517:1582" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1595:1661" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1705:1817" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1855:2186" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1939:2180" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1998:2075" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2092:2170" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2274:2538" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2464:2509" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2570:2626" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2648:2889" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="2759:2872" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeyButton.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        <state relative-caret-position="405">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
           <folding>
-            <marker date="1619287063202" expanded="true" signature="6:155" ph="..." />
-            <marker date="1619287063202" expanded="true" signature="195:1426" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="563:805" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="863:1232" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="920:1216" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="959:1106" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="1123:1204" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="1258:1295" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="1330:1424" ph="{...}" />
-            <marker date="1619287063202" expanded="true" signature="1367:1418" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/KeysPressedContorller.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <marker date="1619288493407" expanded="true" signature="6:127" ph="..." />
-            <marker date="1619288493407" expanded="true" signature="179:2773" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="377:567" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="606:663" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="706:890" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="787:884" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="955:1147" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1203:1252" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1307:1371" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1404:1496" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1548:1598" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1653:1706" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1744:2075" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1828:2069" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1887:1964" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="1981:2059" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="2163:2427" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="2353:2398" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="2459:2515" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="2537:2771" ph="{...}" />
-            <marker date="1619288493407" expanded="true" signature="2646:2754" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <marker date="1619287063210" expanded="false" signature="6:110" ph="..." />
-            <marker date="1619287063210" expanded="true" signature="147:1413" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="423:493" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="551:600" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="625:809" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="676:733" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="837:1011" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="909:1005" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="1046:1095" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="1127:1183" ph="{...}" />
-            <marker date="1619287063210" expanded="true" signature="1201:1406" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="6:155" ph="..." />
+            <marker date="1619294757427" expanded="true" signature="195:1507" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="556:832" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="890:1245" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="947:1239" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="986:1132" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1149:1229" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1275:1314" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1339:1376" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1411:1505" ph="{...}" />
+            <marker date="1619294757427" expanded="true" signature="1448:1499" ph="{...}" />
           </folding>
         </state>
       </provider>

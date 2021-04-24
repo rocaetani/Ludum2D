@@ -11,7 +11,7 @@
           <e p="DepthMeterController.cs" t="Include" />
           <e p="GameObjectAccess.cs" t="Include" />
           <e p="KeyButton.cs" t="Include" />
-          <e p="KeysPressedContorller.cs" t="Include" />
+          <e p="KeysPressedController.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

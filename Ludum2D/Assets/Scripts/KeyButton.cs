@@ -10,8 +10,8 @@ public class KeyButton : MonoBehaviour
 {
     
     public KeyCode key;
-    private Image _buttonImage;
-    private TextMeshPro _text;
+    public Image ButtonImage;
+    public TMP_Text Text;
 
     public Sprite buttonActivated;
     public Sprite buttonNotPressed;
@@ -28,10 +28,12 @@ public class KeyButton : MonoBehaviour
         _isFastPress = false;
         _isToPress = false;
 
-        _buttonImage = GetComponentInChildren<Image>();
-        _text = GetComponentInChildren<TextMeshPro>();
+        ButtonImage = GetComponentInChildren<Image>();
 
-        _text.text = key + "";
+
+        String keyString = key + "";
+        keyString = keyString.Replace("Alpha", "");
+        Text.text = keyString;
     }
 
     // Update is called once per frame
@@ -43,19 +45,19 @@ public class KeyButton : MonoBehaviour
             if (!_isPressed)
             {
                 GameObjectAccess.Player.AmountToDecrease += 1;
-                _buttonImage.sprite = buttonNotPressed;
+                ButtonImage.sprite = buttonNotPressed;
             }
             else
             {
-                _buttonImage.sprite = buttonPressed;
+                ButtonImage.sprite = buttonPressed;
             }
-
-
         }
-
-        
     }
 
+    public void SetToPress()
+    {
+        _isToPress = true;
+    }
 
     public int IntKey()
     {
