@@ -45,10 +45,6 @@ public class BackgroundChange : MonoBehaviour
         }
 
         Color interpolatedColor = Color.Lerp(from, to, interpolateAmount);
-
-        Debug.Log($"From: {from}, To: {to}");
-        Debug.Log($"Color: {interpolatedColor}, Amount: {interpolateAmount}");
-
         MainCamera.backgroundColor = interpolatedColor;
     }
 
