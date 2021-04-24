@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class OxygenMeterController : MonoBehaviour
 {
 
-   private Image _oxygenPie;
+    public GameObject oxygenPie;
+    private Image _oxygenPie;
 
     void Start()
     {
-        _oxygenPie = GetComponent<Image>();
+        _oxygenPie = oxygenPie.GetComponent<Image>();
     }
 
     void Update()
