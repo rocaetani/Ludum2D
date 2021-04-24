@@ -8,8 +8,10 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BackgroundChange.cs" t="Include" />
-          <e p="KeyButtonsController.cs" t="Include" />
-          <e p="KeysPressed.cs" t="Include" />
+          <e p="DepthMeterController.cs" t="Include" />
+          <e p="GameObjectAccess.cs" t="Include" />
+          <e p="KeyButton.cs" t="Include" />
+          <e p="KeysPressedContorller.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

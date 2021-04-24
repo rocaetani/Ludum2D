@@ -1,30 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class KeysPressed : MonoBehaviour
+public class KeysPressedContorller : MonoBehaviour
 {
 
     private List<KeyCode> _keyToPressList;
 
-    private List<int> _freeKeys;
-
     private int _lastTimeKeyAdded;
+
+    private List<KeyButton> _freeLeftKeyList;
     
-    // Start is called before the first frame update
+    private List<KeyButton> _freeRightKeyList;
     void Start()
     {
         _keyToPressList = new List<KeyCode>();
-        _freeKeys = new List<int>();
-        PopulateFreeKeys();
+        _freeLeftKeyList = new List<KeyButton>();
+        _freeRightKeyList = new List<KeyButton>();
+        InitFreeKeysLists();
+
     }
 
     //48-57  97-122
     void Update()
     {
-        CreateKeyToPressByTime();
+        
+        //CreateKeyToPressByTime();
     }
-
 
     private void CreateKeyToPressByTime()
     {
@@ -38,20 +42,17 @@ public class KeysPressed : MonoBehaviour
     // 0-36  Numeros e Letras
     public KeyCode RandomizeKey()
     {
-        int i = Random.Range(0, _freeKeys.Count);
-        int freeKey = _freeKeys[i];
-        _freeKeys.RemoveAt(i);
+        int i = Random.Range(0, _freeKeyList.Count);
+        int freeKey = _freeKeyList[i].IntKey();
+        _freeKeyList.RemoveAt(i);
         
         return (KeyCode) (freeKey);
     }
 
-    public void ReleaseKeyToPress(KeyCode keyCode)
+    public void ReleaseKeyToPress(KeyButton keyButton)
     {
-        int keyValue = (int) (keyCode);
-        _freeKeys.Add(keyValue);
+        _freeKeyList.Add(keyButton);
     }
-
-
 
     public bool AlreadyInListToPress(KeyCode keyCode)
     {  
@@ -73,20 +74,36 @@ public class KeysPressed : MonoBehaviour
     {
         _keyToPressList.Remove(keyCode);
     }
-    
-    private void PopulateFreeKeys()
+
+    private void InitFreeKeysLists()
     {
-        for (int i = 48; i < 58; i++)
+        foreach (KeyButton keyButton in GetComponentsInChildren<KeyButton>())
         {
-            _freeKeys.Add(i);
-        }
-        for (int i = 97; i < 123; i++)
-        {
-            _freeKeys.Add(i);
+            if (VerifyButtonSide(keyButton.key))
+            {
+                _freeLeftKeyList.Add(keyButton);
+            }
+            else
+            {
+                _freeRightKeyList.Add(keyButton);
+            }
         }
     }
-    
-    
+
+    //return true=Left false=Right 
+    private bool VerifyButtonSide(KeyCode keyCode)
+    {
+        String KeyString = keyCode + "";
+        KeyString = KeyString.Replace("Alpha", "");
+        String leftSide = "12345QWERTASDFGZXCV";
+        if (leftSide.Contains(KeyString))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     private int TruncateTime()
     {
         return Mathf.FloorToInt(Time.time);

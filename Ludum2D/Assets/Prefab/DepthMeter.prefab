@@ -88,8 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debf111ee3974454ba6832483cc6ed50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {fileID: 0}
-  maxDepth: 100
+  maxDepth: 101.6
   chevron: {fileID: 6563780330594382648}
 --- !u!1 &6563780330594382648
 GameObject:

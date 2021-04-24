@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DepthMeterController : MonoBehaviour
 {
-    public Transform playerPosition;
+    //public Transform playerPosition;
     public float maxDepth = 1;
 
     public GameObject chevron;
@@ -26,7 +26,7 @@ public class DepthMeterController : MonoBehaviour
 
     void Update()
     {
-        float currentDepth = playerPosition.position.y;
+        float currentDepth = GameObjectAccess.Player.transform.position.y;
         float depthRatio = currentDepth / maxDepth;
 
         float interpolatedHeight = (depthRatio * _endHeight) + _startHeight;

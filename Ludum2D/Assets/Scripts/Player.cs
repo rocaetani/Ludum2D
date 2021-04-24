@@ -65,21 +65,15 @@ public class Player : MonoBehaviour
         return Mathf.FloorToInt(Time.time);
     }
 
-    private void ChangeDecrease(int newAmountToDecrease)
-    {
-        AmountToDecrease = newAmountToDecrease;
-    }
-
     void OnGUI()
     {
         GUI.color = Color.red;
         
        
         
-        GUI.Label(new Rect(10, 10, 150, 100), _airBar + "");
-        GUI.Label(new Rect(10, 10, 150, 100), _airBar + "");
+        GUI.Label(new Rect(100, 10, 150, 100), _airBar + "");
         
-        GUI.Label(new Rect(10, 20, 150, 100), Time.time + "");
+        GUI.Label(new Rect(100, 20, 150, 100), Time.time + "");
 
     }
     
