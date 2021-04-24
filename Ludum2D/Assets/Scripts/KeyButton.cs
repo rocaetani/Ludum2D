@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class KeyButton : MonoBehaviour
 {
-    
+
     public KeyCode key;
     public Image ButtonImage;
     public TMP_Text Text;
@@ -16,11 +16,11 @@ public class KeyButton : MonoBehaviour
     public Sprite buttonActivated;
     public Sprite buttonNotPressed;
     public Sprite buttonPressed;
-    
+
     private bool _isPressed;
     private bool _isToPress;
     private bool _isFastPress;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +44,7 @@ public class KeyButton : MonoBehaviour
         {
             if (!_isPressed)
             {
-                GameObjectAccess.Player.AmountToDecrease += 1;
+                GameObjectAccess.Player.DecreasePerSecond += 1;
                 ButtonImage.sprite = buttonNotPressed;
             }
             else
@@ -72,7 +72,7 @@ public class KeyButton : MonoBehaviour
         }
         else
         {
-            _isPressed = false; 
+            _isPressed = false;
         }
     }
 }
