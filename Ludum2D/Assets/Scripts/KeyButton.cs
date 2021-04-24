@@ -16,16 +16,17 @@ public class KeyButton : MonoBehaviour
     public Sprite buttonActivated;
     public Sprite buttonNotPressed;
     public Sprite buttonPressed;
-    
-    public float AmountTo
-    
+
     private bool _isPressed;
     private bool _isToPress;
     private bool _isFastPress;
 
+    private bool controlPlayerAir;
+    
     // Start is called before the first frame update
     void Start()
     {
+        controlPlayerAir = true;
         _isPressed = false;
         _isFastPress = false;
         _isToPress = false;
@@ -48,13 +49,22 @@ public class KeyButton : MonoBehaviour
         {
             if (!_isPressed)
             {
-                GameObjectAccess.Player.DecreasePerSecond += 1;
+                if (controlPlayerAir)
+                {
+                    controlPlayerAir = false;
+                    GameObjectAccess.Player.DecreasePerSecond += GameObjectAccess.Player.DecreasePerSecondPerButton;
+                }
                 ButtonImage.sprite = buttonNotPressed;
                 ButtonImage.enabled = true;
                 Text.enabled = true;
             }
             else
             {
+                if (!controlPlayerAir)
+                {
+                    controlPlayerAir = true;
+                    GameObjectAccess.Player.DecreasePerSecond -= GameObjectAccess.Player.DecreasePerSecondPerButton;
+                }
                 ButtonImage.sprite = buttonPressed;
                 ButtonImage.enabled = true;
                 Text.enabled = true;

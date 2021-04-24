@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public float AirMaximum;
     public float AirAmount;
     public float DecreasePerSecond;
+    public float DecreasePerSecondPerButton;
     public float AirRatio {
         get {
             return AirAmount / AirMaximum;
