@@ -15,7 +15,6 @@ public class OxygenMeterController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(GameObjectAccess.Player.AirRatio);
         _oxygenPie.fillAmount = GameObjectAccess.Player.AirRatio;
     }
 }
