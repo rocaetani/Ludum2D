@@ -10,16 +10,18 @@ public class Player : MonoBehaviour
     public float Velocity;
     public float Score;
 
-    public float VelocitySideways;
+    public float SidewaysImpulse;
 
+    private Vector2 _direction;
+    private int _sidewaysHeading;
+    private Rigidbody2D _rb;
+
+    [Header("Game Objects")]
     public GameObject loserScreen;
     public GameObject anchor;
     public GameObject caradoCara;
     public GameObject musica1;
     public GameObject musica2;
-
-    private Vector3 _direction;
-    private int _sidewaysHeading;
 
     private Animator animationController;
 
@@ -47,22 +49,31 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        _rb = gameObject.GetComponent<Rigidbody2D>();
+
         AirAmount = AirMaximum;
-        VelocitySideways = 5;
+        SidewaysImpulse = 5;
         animationController = GetComponent<Animator>();
 
         _sidewaysHeading = 1;
 
-        _direction = Vector3.up * GoingDirection();
+        _direction = Vector2.up * GoingDirection();
         animationController.SetBool("GoingUp", playerState == PlayerState.GoingUp);
 
         Score = 0;
     }
 
-    void Update()
-    {
+    void FixedUpdate() {
+        if(playerState == PlayerState.Dead) {
+            return;
+        }
+
         Move();
         MoveSideways();
+    }
+
+    void Update()
+    {
         LoseAir();
         if(AirAmount < 0)
         {
@@ -77,15 +88,11 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        if(playerState == PlayerState.Dead) {
-            return;
-        }
-
         if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
         {
             startMovingUp();
         }
-        transform.position += Time.deltaTime * Velocity * _direction;
+        _rb.position += Time.deltaTime * Velocity * _direction;
     }
 
     private void LoseAir()
@@ -108,9 +115,9 @@ public class Player : MonoBehaviour
     public void MoveSideways()
     {
         int direction = 0;
-        if(Input.GetKey(KeyCode.LeftArrow)) {
+        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
             direction = -1;
-        } else if(Input.GetKey(KeyCode.RightArrow)) {
+        } else if(Input.GetKeyDown(KeyCode.RightArrow)) {
             direction = 1;
         }
 
@@ -121,8 +128,7 @@ public class Player : MonoBehaviour
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
 
-            print("side");
-            transform.position += Time.deltaTime * VelocitySideways * direction * Vector3.right;
+            _rb.AddForce(SidewaysImpulse * direction * Vector2.right, ForceMode2D.Impulse);
         } else {
             animationController.SetBool("MovingSideways", false);
         }
