@@ -18,10 +18,12 @@ public class Player : MonoBehaviour
 
     [Header("Game Objects")]
     public GameObject loserScreen;
+    public GameObject winnerScreen;
     public GameObject anchor;
     public GameObject caradoCara;
     public GameObject musica1;
     public GameObject musica2;
+    public GameObject soundDeath;
 
     private Animator animationController;
 
@@ -139,13 +141,17 @@ public class Player : MonoBehaviour
     {
         animationController.SetBool("IsDed", true);
         playerState = PlayerState.Dead;
+        musica1.SetActive(false);
+        musica2.SetActive(false);
+        soundDeath.SetActive(true);
         StartCoroutine(WaitForDeath());
     }
 
     public void PlayerSurface()
     {
-        Debug.Log("colocar coisa aqui");
-        Debug.Log(Score);
+        anchor.SetActive(false);
+        winnerScreen.SetActive(true);
+        
     }
 
     public void GameOver()
@@ -153,6 +159,7 @@ public class Player : MonoBehaviour
         loserScreen.SetActive(true);
         caradoCara.SetActive(false);
         anchor.SetActive(false);
+        soundDeath.SetActive(true);
         DeactivateKeys();
         Debug.Log("Implementar aqui a morte do personagem");
     }
