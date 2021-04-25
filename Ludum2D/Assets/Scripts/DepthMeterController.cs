@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DepthMeterController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DepthMeterController : MonoBehaviour
     public float maxDepth = -1;
 
     public GameObject chevron;
+    public TMP_Text meters;
 
     private RectTransform _depthTransform;
     private RectTransform _chevronTransform;
@@ -33,6 +35,7 @@ public class DepthMeterController : MonoBehaviour
         float interpolatedHeight = (depthRatio * -_endHeight) + _startHeight;
 
         _chevronTransform.anchoredPosition = new Vector3(_chevronTransform.anchoredPosition.x, interpolatedHeight);
-        
+
+        meters.text = $"{Mathf.Abs(currentDepth):0.00}M";
     }
 }
