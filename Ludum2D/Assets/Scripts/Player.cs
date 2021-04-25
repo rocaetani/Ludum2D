@@ -9,8 +9,12 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     public float Velocity;
 
+    public float VelocitySideways;
+
 
     private Vector3 _direction;
+
+    //private Vector3 _direction2ponto0 = new Vector3();
 
     public bool GoingUp;
     public Animator anim;
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         AirAmount = AirMaximum;
+        VelocitySideways = 5;
         _direction = Vector3.down;
         GoingUp = false;
         anim = GetComponent<Animator>();
@@ -73,6 +78,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    /*
+    public void MoveSideways(Vector3 objPos)
+    {
+        _direction2ponto0.x = objPos.x;
+        transform.position += Time.deltaTime * Velocity * _direction2ponto0; //sla se é isso, vejo depois
+
+    }
+    */
     public void PlayerDead()
     {
         anim.SetBool("IsDed", true);
