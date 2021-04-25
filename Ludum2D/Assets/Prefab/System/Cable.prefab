@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastCable: {fileID: 5780338082134923219}
-  cablesSoFar: 2
+  cablesSoFar: 0
 --- !u!1 &2662199035399033798
 GameObject:
   m_ObjectHideFlags: 0
