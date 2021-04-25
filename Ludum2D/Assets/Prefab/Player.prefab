@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocity: 2
+  VelocitySideways: 0
   GoingUp: 0
   anim: {fileID: 0}
   AirMaximum: 100
