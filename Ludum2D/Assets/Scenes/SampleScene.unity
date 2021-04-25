@@ -850,6 +850,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1308956144985579892, guid: f732a76b6554f864faba7af58032d7ae,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 539.74915
+      objectReference: {fileID: 0}
     - target: {fileID: 6445341105432286465, guid: f732a76b6554f864faba7af58032d7ae,
         type: 3}
       propertyPath: m_Camera
