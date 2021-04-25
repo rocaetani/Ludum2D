@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public GameObject loserScreen;
     public GameObject anchor;
     public GameObject caradoCara;
+    public GameObject musica1;
+    public GameObject musica2;
     private Vector3 _direction;
 
     //private Vector3 _direction2ponto0 = new Vector3();
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour
     private Animator animationController;
 
     private int _currentSeconds;
+    public bool playerdied;
 
     [Header("Air Bar")]
     public float AirMaximum;
@@ -48,6 +51,7 @@ public class Player : MonoBehaviour
         AirAmount = AirMaximum;
         VelocitySideways = 5;
         animationController = GetComponent<Animator>();
+        playerdied = false;
 
         _direction = Vector3.up * GoingDirection();
         animationController.SetBool("GoingUp", playerState == PlayerState.GoingUp);
@@ -72,11 +76,14 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
+        if(!playerdied)
         {
-            startMovingUp();
+            if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
+            {
+                startMovingUp();
+            }
+            transform.position += Time.deltaTime * Velocity * _direction;
         }
-        transform.position += Time.deltaTime * Velocity * _direction;
     }
 
     private void LoseAir()
@@ -106,6 +113,7 @@ public class Player : MonoBehaviour
     */
     public void PlayerDead()
     {
+        playerdied = true;
         animationController.SetBool("IsDed", true);
         playerState = PlayerState.Dead;
         StartCoroutine(WaitForDeath());
@@ -160,6 +168,8 @@ public class Player : MonoBehaviour
         playerState = PlayerState.GoingUp;
         _direction = Vector3.up;
         animationController.SetBool("GoingUp", true);
+        musica1.SetActive(false);
+        musica2.SetActive(true);
 
         Score = transform.position.y;
 
