@@ -65,9 +65,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
         {
-            playerState = PlayerState.GoingUp;
-            _direction = Vector3.up;
-            animationController.SetBool("GoingUp", true);
+            startMovingUp();
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -114,6 +112,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(3f);
         GameOver();
     }
+
     public int GoingDirection()
     {
         return playerState == PlayerState.GoingUp? 1 : -1;
@@ -132,4 +131,15 @@ public class Player : MonoBehaviour
         GUI.Label(new Rect(100, 30, 150, 100), transform.position.y + "");
     }
 
+    private void startMovingUp() {
+        playerState = PlayerState.GoingUp;
+        _direction = Vector3.up;
+        animationController.SetBool("GoingUp", true);
+
+        GameObject attachedCable = gameObject.findChildWithTag("Cable");
+        if(attachedCable != null) {
+            // Detach cable from player
+            attachedCable.transform.parent = null;
+        }
+    }
 }
