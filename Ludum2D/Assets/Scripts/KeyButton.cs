@@ -21,15 +21,20 @@ public class KeyButton : MonoBehaviour
     private bool _isToPress;
     private bool _isFastPress;
 
+    private bool controlPlayerAir;
+    
     // Start is called before the first frame update
     void Start()
     {
+        controlPlayerAir = true;
         _isPressed = false;
         _isFastPress = false;
         _isToPress = false;
 
         ButtonImage = GetComponentInChildren<Image>();
 
+        ButtonImage.enabled = false;
+        Text.enabled = false;
 
         String keyString = key + "";
         keyString = keyString.Replace("Alpha", "");
@@ -44,12 +49,25 @@ public class KeyButton : MonoBehaviour
         {
             if (!_isPressed)
             {
-                GameObjectAccess.Player.DecreasePerSecond += 1;
+                if (controlPlayerAir)
+                {
+                    controlPlayerAir = false;
+                    GameObjectAccess.Player.DecreasePerSecond += GameObjectAccess.Player.DecreasePerSecondPerButton;
+                }
                 ButtonImage.sprite = buttonNotPressed;
+                ButtonImage.enabled = true;
+                Text.enabled = true;
             }
             else
             {
+                if (!controlPlayerAir)
+                {
+                    controlPlayerAir = true;
+                    GameObjectAccess.Player.DecreasePerSecond -= GameObjectAccess.Player.DecreasePerSecondPerButton;
+                }
                 ButtonImage.sprite = buttonPressed;
+                ButtonImage.enabled = true;
+                Text.enabled = true;
             }
         }
     }
@@ -64,6 +82,8 @@ public class KeyButton : MonoBehaviour
        return (int) key;
     }
 
+    
+    
     public void VerifyIsPressed()
     {
         if (Input.GetKey(key))
