@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocity: 2
+  GoingUp: 0
+  anim: {fileID: 0}
   AirMaximum: 100
   AirAmount: 100
   DecreasePerSecond: 1
@@ -178,7 +180,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 20
   field of view: 60
   orthographic: 1
   orthographic size: 2.5
