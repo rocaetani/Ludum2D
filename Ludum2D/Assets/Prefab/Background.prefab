@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2812254224029502185}
   - component: {fileID: 2812254224029502186}
   m_Layer: 0
-  m_Name: BackGroundController
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,20 +38,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812254224029502187}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 343346d4933d50243b881bd2d806b55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
-  PlayerPosition: {fileID: 0}
   depthChanges:
-  - 1
-  - 2
-  - 3
-  - 4
+  - 0
+  - -10
+  - -20
+  - -35
+  - -40
+  - -70
+  - -100
   colorChanges:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0.5339526, b: 0.6603774, a: 0}
+  - {r: 0.019001435, g: 0.46947736, b: 0.5754717, a: 0}
+  - {r: 0, g: 0.33602872, b: 0.41509432, a: 0}
+  - {r: 0, g: 0.2985048, b: 0.3679245, a: 0}
+  - {r: 0.020825924, g: 0.1991637, b: 0.33962262, a: 0}
+  - {r: 0, g: 0.057345446, b: 0.1792453, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}

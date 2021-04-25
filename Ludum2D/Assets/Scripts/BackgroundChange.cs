@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class BackgroundChange : MonoBehaviour
 {
-
-    public Camera MainCamera;
-    public Transform PlayerPosition;
-
+    [Header("Depth and Color Changes")]
     public List<float> depthChanges;
     public List<Color> colorChanges;
 
-    // private Dictionary<float, Color> _backgroundChanges = new Dictionary<float, Color>();
+    private Camera _mainCamera;
+    private Transform _playerPosition;
 
     void Start()
     {
@@ -19,6 +17,9 @@ public class BackgroundChange : MonoBehaviour
         {
             Debug.LogError("Depth Changes e Color Changes devem ter o mesmo tamanho");
         }
+
+        _mainCamera = GameObjectAccess.MainCamera;
+        _playerPosition = GameObjectAccess.Player.gameObject.transform;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class BackgroundChange : MonoBehaviour
         Color to = colorChanges[colorChanges.Count - 1];
         float interpolateAmount = 0;
 
-        float currentDepth = PlayerPosition.position.y;
+        float currentDepth = _playerPosition.position.y;
 
         for(int i = depthChanges.Count - 1; i >= 0 ; i--)
         {
@@ -45,7 +46,7 @@ public class BackgroundChange : MonoBehaviour
         }
 
         Color interpolatedColor = Color.Lerp(from, to, interpolateAmount);
-        MainCamera.backgroundColor = interpolatedColor;
+        _mainCamera.backgroundColor = interpolatedColor;
     }
 
 }

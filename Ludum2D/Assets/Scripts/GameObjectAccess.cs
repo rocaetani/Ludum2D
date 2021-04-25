@@ -4,7 +4,8 @@ using UnityEngine;
 
 public static class GameObjectAccess
 {
-    private static Player _player;
+    private static Player _player = null;
+    private static Camera _mainCamera = null;
 
     public static Player Player
     {
@@ -16,6 +17,18 @@ public static class GameObjectAccess
             }
 
             return _player;
+        }
+    }
+
+    public static Camera MainCamera
+    {
+        get
+        {
+            if(_mainCamera == null) {
+                _mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+            }
+
+            return _mainCamera;
         }
     }
 }
