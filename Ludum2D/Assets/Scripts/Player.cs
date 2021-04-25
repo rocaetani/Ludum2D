@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private Vector3 _direction;
 
     public bool GoingUp;
-
+    public Animator anim;
 
     private int _currentSeconds;
 
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
         AirAmount = AirMaximum;
         _direction = Vector3.down;
         GoingUp = false;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,9 @@ public class Player : MonoBehaviour
     {
         Move();
         LoseAir();
+        if(AirAmount < 1)
+            PlayerDead();
+            
     }
 
     private void Move()
@@ -69,6 +73,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void PlayerDead()
+    {
+        anim.SetBool("IsDed", true);
+        StartCoroutine(WaitForDeath());
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("Implementar aqui a morte do personagem");
+    }
+    IEnumerator WaitForDeath()
+    {
+        yield return new WaitForSeconds(3f);
+        GameOver();
+    }
     public int GoingDirection()
     {
         if (GoingUp)
