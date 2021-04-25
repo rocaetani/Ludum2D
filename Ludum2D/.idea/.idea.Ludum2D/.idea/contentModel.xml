@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="BackgroundChange.cs" t="Include" />
           <e p="Bubble.cs" t="Include" />
+          <e p="BubbleSpawn.cs" t="Include" />
           <e p="DepthMeterController.cs" t="Include" />
           <e p="GameObjectAccess.cs" t="Include" />
           <e p="KeyButton.cs" t="Include" />

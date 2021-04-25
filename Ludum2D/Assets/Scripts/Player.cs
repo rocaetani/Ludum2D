@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     private Vector3 _direction;
 
+    public bool GoingUp;
+
 
     private int _currentSeconds;
 
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     {
         AirAmount = AirMaximum;
         _direction = Vector3.down;
+        GoingUp = false;
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _direction = Vector3.up;
+            GoingUp = true;
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -51,6 +55,28 @@ public class Player : MonoBehaviour
     private void LoseAir()
     {
         AirAmount -= DecreasePerSecond * Time.deltaTime;
+    }
+
+    public void AddAirAmount(float airToAdd)
+    {
+        if (AirMaximum > AirAmount + airToAdd)
+        {
+            AirAmount += airToAdd;
+        }
+        else
+        {
+            AirAmount = AirMaximum;
+        }
+    }
+
+    public int GoingDirection()
+    {
+        if (GoingUp)
+        {
+            return 1;
+        }
+
+        return -1;
     }
 
     void OnGUI()

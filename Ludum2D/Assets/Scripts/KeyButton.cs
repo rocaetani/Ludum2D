@@ -82,8 +82,13 @@ public class KeyButton : MonoBehaviour
        return (int) key;
     }
 
-    
-    
+    public String KeyToString()
+    {
+        String keyString = key + "";
+        keyString = keyString.Replace("Alpha", "");
+        return keyString;
+    }
+
     public void VerifyIsPressed()
     {
         if (Input.GetKey(key))
