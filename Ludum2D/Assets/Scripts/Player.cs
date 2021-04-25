@@ -8,10 +8,13 @@ public class Player : MonoBehaviour
 
     [Header("Movement")]
     public float Velocity;
+    public float Score;
 
     public float VelocitySideways;
 
-
+    public GameObject loserScreen;
+    public GameObject anchor;
+    public GameObject caradoCara;
     private Vector3 _direction;
 
     //private Vector3 _direction2ponto0 = new Vector3();
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour
         _direction = Vector3.down;
         GoingUp = false;
         anim = GetComponent<Animator>();
+        Score = 0;
     }
 
     // Update is called once per frame
@@ -48,6 +52,8 @@ public class Player : MonoBehaviour
         LoseAir();
         if(AirAmount < 1)
             PlayerDead();
+        if(GoingUp && (transform.position.y >= 0))
+            PlayerSurface();
             
     }
 
@@ -57,6 +63,9 @@ public class Player : MonoBehaviour
         {
             _direction = Vector3.up;
             GoingUp = true;
+            anim.SetBool("GoingUp", true);
+            Score = transform.position.y;
+
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -92,9 +101,25 @@ public class Player : MonoBehaviour
         StartCoroutine(WaitForDeath());
     }
 
+    public void PlayerSurface()
+    {
+        Debug.Log("colocar coisa aqui");
+        Debug.Log(Score);
+    }
+
     public void GameOver()
     {
+        loserScreen.SetActive(true);
+        caradoCara.SetActive(false);
+        anchor.SetActive(false);
+        DeactivateKeys();
         Debug.Log("Implementar aqui a morte do personagem");
+    }
+
+
+    public void DeactivateKeys()
+    {
+        //colocar aqui um método pra tirar as teclas que estão aparecendo na tela
     }
     IEnumerator WaitForDeath()
     {
