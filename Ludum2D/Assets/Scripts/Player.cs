@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     //private Vector3 _direction2ponto0 = new Vector3();
 
-    public Animator anim;
+    private Animator animationController;
 
     private int _currentSeconds;
 
@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
 
     [Header("Player State")]
     public PlayerState playerState;
-    public enum PlayerState {
+    public enum PlayerState
+    {
         GoingDown,
         GoingUp,
         Dead
@@ -43,27 +44,30 @@ public class Player : MonoBehaviour
     {
         AirAmount = AirMaximum;
         VelocitySideways = 5;
-        _direction = Vector3.down;
-        anim = GetComponent<Animator>();
+        animationController = GetComponent<Animator>();
+
+        _direction = Vector3.up * GoingDirection();
+        animationController.SetBool("GoingUp", playerState == PlayerState.GoingUp);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
         LoseAir();
         if(AirAmount < 0)
+        {
             PlayerDead();
+        }
 
     }
 
     private void Move()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
         {
-            _direction = Vector3.up;
-            Debug.Log("here");
             playerState = PlayerState.GoingUp;
+            _direction = Vector3.up;
+            animationController.SetBool("GoingUp", true);
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -95,7 +99,7 @@ public class Player : MonoBehaviour
     */
     public void PlayerDead()
     {
-        anim.SetBool("IsDed", true);
+        animationController.SetBool("IsDed", true);
         playerState = PlayerState.Dead;
         StartCoroutine(WaitForDeath());
     }
