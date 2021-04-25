@@ -5,7 +5,7 @@ using UnityEngine;
 public class DepthMeterController : MonoBehaviour
 {
     //public Transform playerPosition;
-    public float maxDepth = 1;
+    public float maxDepth = -1;
 
     public GameObject chevron;
 
@@ -27,13 +27,10 @@ public class DepthMeterController : MonoBehaviour
     void Update()
     {
         float currentDepth = GameObjectAccess.Player.transform.position.y;
-        float depthRatio = currentDepth / maxDepth;
+        float depthRatio = Mathf.Clamp01(currentDepth / maxDepth);
 
-        float interpolatedHeight = (depthRatio * _endHeight) + _startHeight;
-        // interpolatedHeight = Mathf.Min(_startHeight, interpolatedHeight);
-        // interpolatedHeight = Mathf.Max(_endHeight, interpolatedHeight);
+        float interpolatedHeight = (depthRatio * -_endHeight) + _startHeight;
 
         _chevronTransform.anchoredPosition = new Vector3(_chevronTransform.anchoredPosition.x, interpolatedHeight);
-        // chevron.transform.position += new Vector3(0, -Time.deltaTime, 0);
     }
 }
