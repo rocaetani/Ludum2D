@@ -58,6 +58,22 @@ public class KeysController : MonoBehaviour
         
         return freeKey;
     }
+    
+    public KeyButton RandomizeLeftKey()
+    {
+        int i = Random.Range(0, _freeLeftKeyList.Count);
+        KeyButton freeKey = _freeLeftKeyList[i];
+        _freeLeftKeyList.RemoveAt(i);
+        return freeKey;
+    }
+    
+    public KeyButton RandomizeRightKey()
+    {
+        int i = Random.Range(0, _freeRightKeyList.Count);
+        KeyButton freeKey = _freeRightKeyList[i];
+        _freeRightKeyList.RemoveAt(i);
+        return freeKey;
+    }
 
     public void ReleaseKeyToPress(KeyButton keyButton)
     {
@@ -83,6 +99,13 @@ public class KeysController : MonoBehaviour
         KeyButton key = RandomizeKey();
         key.SetToPress();
         _keyToPressList.Add(key);
+    }
+    
+    public KeyButton AddRandomKeyToBubble(bool isLeft)
+    {
+        KeyButton key =  isLeft ? RandomizeLeftKey() :  RandomizeRightKey();
+        _keyToPressList.Add(key);
+        return key;
     }
 
     private void InitFreeKeysLists()
