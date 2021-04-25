@@ -74,6 +74,23 @@ public class KeyButton : MonoBehaviour
 
     public void SetToPress()
     {
+        StartCoroutine(IsComming());
+        //_isToPress = true;
+    }
+
+    IEnumerator IsComming()
+    {
+        ButtonImage.enabled = true;
+        Text.enabled = true; //da pra tirar o texto aqui tbm se for melhor
+        ButtonImage.sprite = buttonNotPressed;
+        yield return new WaitForSeconds(0.5f);
+        ButtonImage.sprite = buttonPressed;
+        yield return new WaitForSeconds(0.5f);
+        ButtonImage.sprite = buttonNotPressed;
+        yield return new WaitForSeconds(0.5f);
+        ButtonImage.sprite = buttonPressed;
+        yield return new WaitForSeconds(0.5f);        
+        
         _isToPress = true;
     }
 

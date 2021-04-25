@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyToPressCreator : MonoBehaviour
 {
+    /*
     void Update()
     {
         if (GameObjectAccess.Player.transform.position.y < transform.position.y)
@@ -12,4 +13,5 @@ public class KeyToPressCreator : MonoBehaviour
             Destroy(this);
         }
     }
+    */
 }
