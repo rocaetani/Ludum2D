@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da30ab8570ad6234b9cda897bf4ec59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeightsToSpawn: ecffffffe2ffffffd8ffffff
+  HeightsToSpawn: e7ffffffceffffffb0ffffff
   BubblePrefab: {fileID: 7538569013435443409, guid: f8ab70329dfc13e40b7f918e0f0d893e,
     type: 3}
 --- !u!4 &218303022
@@ -964,6 +964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047635259487483374, guid: f732a76b6554f864faba7af58032d7ae,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.057
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f732a76b6554f864faba7af58032d7ae, type: 3}
