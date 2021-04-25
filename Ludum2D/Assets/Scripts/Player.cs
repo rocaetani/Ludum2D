@@ -19,8 +19,7 @@ public class Player : MonoBehaviour
 
     //private Vector3 _direction2ponto0 = new Vector3();
 
-    public bool GoingUp;
-    public Animator anim;
+    private Animator animationController;
 
     private int _currentSeconds;
 
@@ -35,37 +34,47 @@ public class Player : MonoBehaviour
         }
     }
 
+    [Header("Player State")]
+    public PlayerState playerState;
+    public enum PlayerState
+    {
+        GoingDown,
+        GoingUp,
+        Dead
+    }
+
     void Start()
     {
         AirAmount = AirMaximum;
         VelocitySideways = 5;
-        _direction = Vector3.down;
-        GoingUp = false;
-        anim = GetComponent<Animator>();
+        animationController = GetComponent<Animator>();
+
+        _direction = Vector3.up * GoingDirection();
+        animationController.SetBool("GoingUp", playerState == PlayerState.GoingUp);
+
         Score = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
         LoseAir();
-        if(AirAmount < 1)
+        if(AirAmount < 0)
+        {
             PlayerDead();
-        if(GoingUp && (transform.position.y >= 0))
+        }
+        else if(playerState == PlayerState.GoingUp && (transform.position.y >= 0))
+        {
             PlayerSurface();
-            
+        }
+
     }
 
     private void Move()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
         {
-            _direction = Vector3.up;
-            GoingUp = true;
-            anim.SetBool("GoingUp", true);
-            Score = transform.position.y;
-
+            startMovingUp();
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -97,7 +106,8 @@ public class Player : MonoBehaviour
     */
     public void PlayerDead()
     {
-        anim.SetBool("IsDed", true);
+        animationController.SetBool("IsDed", true);
+        playerState = PlayerState.Dead;
         StartCoroutine(WaitForDeath());
     }
 
@@ -121,19 +131,16 @@ public class Player : MonoBehaviour
     {
         //colocar aqui um método pra tirar as teclas que estão aparecendo na tela
     }
+    
     IEnumerator WaitForDeath()
     {
         yield return new WaitForSeconds(3f);
         GameOver();
     }
+
     public int GoingDirection()
     {
-        if (GoingUp)
-        {
-            return 1;
-        }
-
-        return -1;
+        return playerState == PlayerState.GoingUp? 1 : -1;
     }
 
     void OnGUI()
@@ -149,4 +156,17 @@ public class Player : MonoBehaviour
         GUI.Label(new Rect(100, 30, 150, 100), transform.position.y + "");
     }
 
+    private void startMovingUp() {
+        playerState = PlayerState.GoingUp;
+        _direction = Vector3.up;
+        animationController.SetBool("GoingUp", true);
+
+        Score = transform.position.y;
+
+        GameObject attachedCable = gameObject.findChildWithTag("Cable");
+        if(attachedCable != null) {
+            // Detach cable from player
+            attachedCable.transform.parent = null;
+        }
+    }
 }
