@@ -8,8 +8,7 @@ public class KeysController : MonoBehaviour
 {
 
     public int SecondsToNewKey;
-
-    public int KeysPressed;
+    
     public int MaxKeys; //número máximo de teclas que podem ser pressionadas ao mesmo tempo
     
     private List<KeyButton> _keyToPressList;
@@ -19,12 +18,13 @@ public class KeysController : MonoBehaviour
     private List<KeyButton> _freeLeftKeyList;
     
     private List<KeyButton> _freeRightKeyList;
+
+    public bool TurnOnCreateByTime;
     void Start()
     {
         _keyToPressList = new List<KeyButton>();
         _freeLeftKeyList = new List<KeyButton>();
         _freeRightKeyList = new List<KeyButton>();
-        KeysPressed = 0;
         MaxKeys = 6;
         InitFreeKeysLists();
     }
@@ -32,7 +32,10 @@ public class KeysController : MonoBehaviour
     //48-57  97-122
     void Update()
     {
-        CreateKeyToPressByTime();//aqui
+        if(TurnOnCreateByTime){
+            CreateKeyToPressByTime();//aqui
+        }
+        
     }
 
     private void CreateKeyToPressByTime()
@@ -40,15 +43,13 @@ public class KeysController : MonoBehaviour
         if (TruncateTime() % SecondsToNewKey == 0 & TruncateTime() != _lastTimeKeyAdded)
         {
             _lastTimeKeyAdded = TruncateTime();
-            if(KeysPressed < MaxKeys)
+            if(_keyToPressList.Count < MaxKeys)
             {
                 AddRandomKeyToPress();
-                KeysPressed += 1;
             }
             else
             {
-                RemoveRandomKeyPressed();
-                KeysPressed -= 1;
+                ReleaseRandomKeyToPress();
             }
         }
     }
@@ -124,10 +125,7 @@ public class KeysController : MonoBehaviour
         _keyToPressList.Add(key);
     }
 
-    public void RemoveRandomKeyPressed()
-    {
-        Debug.Log("criar aqui um método para remover uma das teclas pressionadas");
-    }
+
     
     public KeyButton AddRandomKeyToBubble(bool isLeft)
     {
