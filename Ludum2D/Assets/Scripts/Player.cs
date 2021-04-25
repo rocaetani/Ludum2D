@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
         }
 
         if(direction != 0) {
+            animationController.SetBool("MovingSideways", true);
             if(direction != _sidewaysHeading) {
                 _sidewaysHeading = direction;
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -122,6 +123,8 @@ public class Player : MonoBehaviour
 
             print("side");
             transform.position += Time.deltaTime * VelocitySideways * direction * Vector3.right;
+        } else {
+            animationController.SetBool("MovingSideways", false);
         }
 
     }
