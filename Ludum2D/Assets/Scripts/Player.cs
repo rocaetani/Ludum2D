@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     private Animator animationController;
 
     private int _currentSeconds;
-    public bool playerdied;
 
     [Header("Air Bar")]
     public float AirMaximum;
@@ -51,7 +50,6 @@ public class Player : MonoBehaviour
         AirAmount = AirMaximum;
         VelocitySideways = 5;
         animationController = GetComponent<Animator>();
-        playerdied = false;
 
         _sidewaysHeading = 1;
 
@@ -79,14 +77,15 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        if(!playerdied)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
-            {
-                startMovingUp();
-            }
-            transform.position += Time.deltaTime * Velocity * _direction;
+        if(playerState == PlayerState.Dead) {
+            return;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.GoingUp)
+        {
+            startMovingUp();
+        }
+        transform.position += Time.deltaTime * Velocity * _direction;
     }
 
     private void LoseAir()
@@ -129,7 +128,6 @@ public class Player : MonoBehaviour
 
     public void PlayerDead()
     {
-        playerdied = true;
         animationController.SetBool("IsDed", true);
         playerState = PlayerState.Dead;
         StartCoroutine(WaitForDeath());
@@ -170,8 +168,6 @@ public class Player : MonoBehaviour
     void OnGUI()
     {
         GUI.color = Color.red;
-
-
 
         GUI.Label(new Rect(100, 10, 150, 100), AirAmount + "");
 
