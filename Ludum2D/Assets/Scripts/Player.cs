@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
     public GameObject caradoCara;
     public GameObject musica1;
     public GameObject musica2;
-    private Vector3 _direction;
 
-    //private Vector3 _direction2ponto0 = new Vector3();
+    private Vector3 _direction;
+    private int _sidewaysHeading;
 
     private Animator animationController;
 
@@ -53,6 +53,8 @@ public class Player : MonoBehaviour
         animationController = GetComponent<Animator>();
         playerdied = false;
 
+        _sidewaysHeading = 1;
+
         _direction = Vector3.up * GoingDirection();
         animationController.SetBool("GoingUp", playerState == PlayerState.GoingUp);
 
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        MoveSideways();
         LoseAir();
         if(AirAmount < 0)
         {
@@ -103,14 +106,27 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*
-    public void MoveSideways(Vector3 objPos)
+    public void MoveSideways()
     {
-        _direction2ponto0.x = objPos.x;
-        transform.position += Time.deltaTime * Velocity * _direction2ponto0; //sla se é isso, vejo depois
+        int direction = 0;
+        if(Input.GetKey(KeyCode.LeftArrow)) {
+            direction = -1;
+        } else if(Input.GetKey(KeyCode.RightArrow)) {
+            direction = 1;
+        }
+
+        if(direction != 0) {
+            if(direction != _sidewaysHeading) {
+                _sidewaysHeading = direction;
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
+
+            print("side");
+            transform.position += Time.deltaTime * VelocitySideways * direction * Vector3.right;
+        }
 
     }
-    */
+
     public void PlayerDead()
     {
         playerdied = true;
@@ -139,7 +155,7 @@ public class Player : MonoBehaviour
     {
         //colocar aqui um método pra tirar as teclas que estão aparecendo na tela
     }
-    
+
     IEnumerator WaitForDeath()
     {
         yield return new WaitForSeconds(3f);

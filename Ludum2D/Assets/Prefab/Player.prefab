@@ -119,10 +119,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocity: 2
   Score: 0
-  VelocitySideways: 0
+  VelocitySideways: 1
   loserScreen: {fileID: 0}
   anchor: {fileID: 0}
   caradoCara: {fileID: 0}
+  musica1: {fileID: 0}
+  musica2: {fileID: 0}
+  playerdied: 0
   AirMaximum: 100
   AirAmount: 100
   DecreasePerSecond: 1
