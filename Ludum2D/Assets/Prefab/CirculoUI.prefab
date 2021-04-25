@@ -259,8 +259,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e578c3d2b4b33d3438a0071439cced66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygenPie: {fileID: 956624872817463160}
+  oxygenPie: {fileID: 956624872817463162}
   faceAnimator: {fileID: 5383788295412331931}
+  colorList:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2133692471485493746
 GameObject:
   m_ObjectHideFlags: 0
