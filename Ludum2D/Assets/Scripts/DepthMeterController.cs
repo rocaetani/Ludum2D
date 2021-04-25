@@ -12,6 +12,7 @@ public class DepthMeterController : MonoBehaviour
     private RectTransform _depthTransform;
     private RectTransform _chevronTransform;
 
+
     private float _startHeight;
     private float _endHeight;
 
@@ -19,9 +20,9 @@ public class DepthMeterController : MonoBehaviour
     {
         _depthTransform = gameObject.GetComponent<RectTransform>();
         _chevronTransform = chevron.GetComponent<RectTransform>();
-
         _startHeight = 0;
         _endHeight = _depthTransform.sizeDelta.y - _chevronTransform.sizeDelta.y;
+
     }
 
     void Update()
@@ -32,5 +33,6 @@ public class DepthMeterController : MonoBehaviour
         float interpolatedHeight = (depthRatio * -_endHeight) + _startHeight;
 
         _chevronTransform.anchoredPosition = new Vector3(_chevronTransform.anchoredPosition.x, interpolatedHeight);
+        
     }
 }
