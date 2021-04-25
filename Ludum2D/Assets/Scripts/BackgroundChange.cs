@@ -35,18 +35,18 @@ public class BackgroundChange : MonoBehaviour
         {
             // Found depth interval
             if(depthChanges[i] >= currentDepth) {
+                int max = Mathf.Min(colorChanges.Count - 1, i + 1);
                 from = colorChanges[i];
-                to = colorChanges[Mathf.Min(colorChanges.Count, i+1)];
+                to = colorChanges[max];
 
                 float distanceFromDepth = Mathf.Abs(currentDepth - depthChanges[i]);
-                float distanceBetweenDepths = Mathf.Abs(depthChanges[Mathf.Min(colorChanges.Count, i+1)] - depthChanges[i]);
+                float distanceBetweenDepths = Mathf.Abs(depthChanges[max] - depthChanges[i]);
                 interpolateAmount = distanceFromDepth / distanceBetweenDepths;
                 break;
             }
         }
 
-        Color interpolatedColor = Color.Lerp(from, to, interpolateAmount);
-        _mainCamera.backgroundColor = interpolatedColor;
+        _mainCamera.backgroundColor = Color.Lerp(from, to, interpolateAmount);
     }
 
 }
