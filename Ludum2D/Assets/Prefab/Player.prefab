@@ -119,12 +119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocity: 2
   VelocitySideways: 0
-  GoingUp: 0
   anim: {fileID: 0}
   AirMaximum: 100
   AirAmount: 100
   DecreasePerSecond: 1
   DecreasePerSecondPerButton: 0
+  playerState: 0
 --- !u!1 &7736575860247969360
 GameObject:
   m_ObjectHideFlags: 0

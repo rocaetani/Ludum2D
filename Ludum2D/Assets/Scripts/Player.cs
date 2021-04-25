@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
 
     //private Vector3 _direction2ponto0 = new Vector3();
 
-    public bool GoingUp;
     public Animator anim;
 
     private int _currentSeconds;
@@ -32,12 +31,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    [Header("Player State")]
+    public PlayerState playerState;
+    public enum PlayerState {
+        GoingDown,
+        GoingUp,
+        Dead
+    }
+
     void Start()
     {
         AirAmount = AirMaximum;
         VelocitySideways = 5;
         _direction = Vector3.down;
-        GoingUp = false;
         anim = GetComponent<Animator>();
     }
 
@@ -46,9 +52,9 @@ public class Player : MonoBehaviour
     {
         Move();
         LoseAir();
-        if(AirAmount < 1)
+        if(AirAmount < 0)
             PlayerDead();
-            
+
     }
 
     private void Move()
@@ -56,7 +62,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _direction = Vector3.up;
-            GoingUp = true;
+            Debug.Log("here");
+            playerState = PlayerState.GoingUp;
         }
         transform.position += Time.deltaTime * Velocity * _direction;
     }
@@ -89,6 +96,7 @@ public class Player : MonoBehaviour
     public void PlayerDead()
     {
         anim.SetBool("IsDed", true);
+        playerState = PlayerState.Dead;
         StartCoroutine(WaitForDeath());
     }
 
@@ -96,6 +104,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Implementar aqui a morte do personagem");
     }
+
     IEnumerator WaitForDeath()
     {
         yield return new WaitForSeconds(3f);
@@ -103,12 +112,7 @@ public class Player : MonoBehaviour
     }
     public int GoingDirection()
     {
-        if (GoingUp)
-        {
-            return 1;
-        }
-
-        return -1;
+        return playerState == PlayerState.GoingUp? 1 : -1;
     }
 
     void OnGUI()
