@@ -17,6 +17,8 @@ public class KeyButton : MonoBehaviour
     public Sprite buttonNotPressed;
     public Sprite buttonPressed;
 
+    public Sprite buttonActivating;
+
     private bool _isPressed;
     private bool _isToPress;
     private bool _isFastPress;
@@ -82,15 +84,18 @@ public class KeyButton : MonoBehaviour
     {
         ButtonImage.enabled = true;
         Text.enabled = true; //da pra tirar o texto aqui tbm se for melhor
-        ButtonImage.sprite = buttonNotPressed;
-        yield return new WaitForSeconds(0.5f);
-        ButtonImage.sprite = buttonPressed;
-        yield return new WaitForSeconds(0.5f);
-        ButtonImage.sprite = buttonNotPressed;
-        yield return new WaitForSeconds(0.5f);
-        ButtonImage.sprite = buttonPressed;
-        yield return new WaitForSeconds(0.5f);        
-        
+        ButtonImage.sprite = buttonActivating;
+        yield return new WaitForSeconds(0.35f);
+        ButtonImage.sprite = buttonActivated;
+        yield return new WaitForSeconds(0.35f);
+        ButtonImage.sprite = buttonActivating;
+        yield return new WaitForSeconds(0.35f);
+        ButtonImage.sprite = buttonActivated;
+        yield return new WaitForSeconds(0.35f);        
+        ButtonImage.sprite = buttonActivating;
+        yield return new WaitForSeconds(0.35f);
+        ButtonImage.sprite = buttonActivated;
+        yield return new WaitForSeconds(0.35f); 
         _isToPress = true;
     }
 
