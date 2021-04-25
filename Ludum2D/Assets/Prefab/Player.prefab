@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1287201596360182786, guid: 17601cbd0e7c1f44591a0e83f4858eb6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -118,8 +118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocity: 2
+  Score: 0
   VelocitySideways: 0
-  anim: {fileID: 0}
+  loserScreen: {fileID: 0}
+  anchor: {fileID: 0}
+  caradoCara: {fileID: 0}
   AirMaximum: 100
   AirAmount: 100
   DecreasePerSecond: 1

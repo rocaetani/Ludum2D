@@ -28,7 +28,9 @@ public class Bubble : MonoBehaviour
     private float _timeItStarted;
 
     private bool _popControl;
-    
+
+    private Animator _animator;
+
     public void GetButton()
     {
         bool isLeft = transform.position.x < 0;
@@ -44,6 +46,7 @@ public class Bubble : MonoBehaviour
         GetButton();
         _popControl = false;
         Sprite.color = colorActive;
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,16 +59,17 @@ public class Bubble : MonoBehaviour
             if (Input.GetKeyDown(_keyButton.key))
             {
                 _numberOfPresses += 1;
-                Sprite.color = colorPressed;
+                _animator.SetBool("Pressed", true);
                 if (_numberOfPresses == PressesNeeded)
                 {
                     GameObjectAccess.Player.AddAirAmount(AdditionToAr);
+                    
                     Pop();
                 }
             }
             else
             {
-                Sprite.color = colorActive;
+                _animator.SetBool("Pressed", false);
             }
 
             if (!_popControl)
@@ -77,7 +81,8 @@ public class Bubble : MonoBehaviour
                 
                 if (Mathf.Abs(transform.position.y - GameObjectAccess.Player.transform.position.y) > 5)
                 {
-                    Pop();
+                    GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
+                    Destroy(gameObject);
                 }
                 
 
@@ -87,9 +92,11 @@ public class Bubble : MonoBehaviour
 
     private void Pop()
     {
+        Debug.Log("Pop");
         _popControl = true;
-        //anim of popping
-        Destroy(gameObject);
+        _animator.SetBool("Pop", true);
+        BubbleText.text = "";
+
     }
     
 }

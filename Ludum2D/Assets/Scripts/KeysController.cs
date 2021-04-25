@@ -103,8 +103,17 @@ public class KeysController : MonoBehaviour
                 _freeRightKeyList.Add(keyButton);
             }
         }
+    }
+    
+    public void ReleaseRandomKeyToPress()
+    {
+        if (_keyToPressList.Count > 0)
+        {
+            int i = Random.Range(0, _keyToPressList.Count);
+            KeyButton freeKey = _keyToPressList[i];
+            ReleaseKeyToPress(freeKey);
+        }
 
-        
     }
     
 
