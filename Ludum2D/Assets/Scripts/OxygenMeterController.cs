@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class OxygenMeterController : MonoBehaviour
 {
-
     public GameObject oxygenPie;
     private Image _oxygenPie;
+
+    public Animator faceAnimator;
 
     void Start()
     {
@@ -17,5 +18,6 @@ public class OxygenMeterController : MonoBehaviour
     void Update()
     {
         _oxygenPie.fillAmount = GameObjectAccess.Player.AirRatio;
+        faceAnimator.SetFloat("O2Meter", _oxygenPie.fillAmount);
     }
 }

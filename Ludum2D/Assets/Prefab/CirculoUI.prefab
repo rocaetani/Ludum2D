@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 956624871248173418}
   - component: {fileID: 956624871248173419}
   - component: {fileID: 5383788295412331931}
-  - component: {fileID: 6013328361802373539}
   m_Layer: 5
   m_Name: CaraDoCara
   m_TagString: Untagged
@@ -96,18 +95,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6013328361802373539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956624871248173417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d382a6842370d4892d9d8d3dc024b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &956624872817463160
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
+  m_Color: {r: 0.2556984, g: 0.7735849, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -273,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygenPie: {fileID: 956624872817463160}
-  animator: {fileID: 0}
+  faceAnimator: {fileID: 5383788295412331931}
 --- !u!1 &2133692471485493746
 GameObject:
   m_ObjectHideFlags: 0
