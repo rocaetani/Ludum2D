@@ -8,10 +8,12 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BackgroundChange.cs" t="Include" />
+          <e p="Bubble.cs" t="Include" />
           <e p="DepthMeterController.cs" t="Include" />
           <e p="GameObjectAccess.cs" t="Include" />
           <e p="KeyButton.cs" t="Include" />
-          <e p="KeysPressedController.cs" t="Include" />
+          <e p="KeysController.cs" t="Include" />
+          <e p="KeyToPressCreator.cs" t="Include" />
           <e p="OxygenMeterController.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>

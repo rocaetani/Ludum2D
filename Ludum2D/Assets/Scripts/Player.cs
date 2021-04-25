@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
 
         GUI.Label(new Rect(100, 20, 150, 100), Time.time + "");
 
+        GUI.Label(new Rect(100, 30, 150, 100), transform.position.y + "");
     }
 
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class KeysPressedController : MonoBehaviour
+public class KeysController : MonoBehaviour
 {
 
     public int SecondsToNewKey;
@@ -27,7 +27,7 @@ public class KeysPressedController : MonoBehaviour
     //48-57  97-122
     void Update()
     {
-        CreateKeyToPressByTime();
+        //CreateKeyToPressByTime();
     }
 
     private void CreateKeyToPressByTime()
@@ -35,7 +35,7 @@ public class KeysPressedController : MonoBehaviour
         if (TruncateTime() % SecondsToNewKey == 0 & TruncateTime() != _lastTimeKeyAdded)
         {
             _lastTimeKeyAdded = TruncateTime();
-            AddKeyToPress();
+            AddRandomKeyToPress();
         }
     }
 
@@ -61,18 +61,24 @@ public class KeysPressedController : MonoBehaviour
 
     public void ReleaseKeyToPress(KeyButton keyButton)
     {
-        if (VerifyButtonSide(keyButton.key))
+        if (_keyToPressList.Contains(keyButton))
         {
-            _freeLeftKeyList.Add(keyButton);
+            _keyToPressList.Remove(keyButton);
+            if (VerifyButtonSide(keyButton.key))
+            {
+                _freeLeftKeyList.Add(keyButton);
+            }
+            else
+            {
+                _freeRightKeyList.Add(keyButton);
+            }
         }
-        else
-        {
-            _freeRightKeyList.Add(keyButton);
-        }
+
+        
     }
     
 
-    public void AddKeyToPress()
+    public void AddRandomKeyToPress()
     {
         KeyButton key = RandomizeKey();
         key.SetToPress();
