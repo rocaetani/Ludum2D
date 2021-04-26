@@ -9,6 +9,7 @@ public class YouWinScreen : MonoBehaviour
     public float Score;
     public float LastHS = 0f;
     public Text NewHSText;
+    public GameObject NewHS;
     public Text TextLastHS;
 
     void Start()
@@ -18,10 +19,11 @@ public class YouWinScreen : MonoBehaviour
 
         if(Score > LastHS)
         {
+            NewHS.SetActive(true);
             NewHSText.text = "New HighScore";
             LastHS = Score;
         }
-        TextLastHS.text = $"HighScore: {LastHS:0.00}";
+        TextLastHS.text = $"HighScore: {LastHS:0.00} meters";
     }
 
 }
