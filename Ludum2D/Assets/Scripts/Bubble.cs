@@ -42,6 +42,7 @@ public class Bubble : MonoBehaviour
     {
         _alreadyStarted = false;
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
     }
     
     public void GetButton()
@@ -59,9 +60,10 @@ public class Bubble : MonoBehaviour
         _timeItStarted = Time.time;
         GetButton();
         _popControl = false;
-        _spriteRenderer.enabled = !_spriteRenderer.enabled;
+        
         //SpriteRenderer.color = colorActive;
-        _animator = GetComponent<Animator>();
+        
+        _animator.SetBool("Active", true);
     }
 
     // Update is called once per frame
@@ -70,7 +72,7 @@ public class Bubble : MonoBehaviour
         
         if (!_alreadyStarted)
         {
-            //_spriteRenderer.enabled = !_spriteRenderer.enabled; 
+            _animator.SetBool("Active", false);
             if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
             {
                 if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)

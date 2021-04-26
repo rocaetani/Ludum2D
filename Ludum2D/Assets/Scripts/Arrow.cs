@@ -49,6 +49,7 @@ public class Arrow : MonoBehaviour
         _timeItStarted = Time.time;
         GetButton();
         _exitControl = false;
+        Sprite.enabled = true;
         _animator = GetComponent<Animator>();
     }
 
@@ -57,7 +58,7 @@ public class Arrow : MonoBehaviour
     {
         if (!_alreadyStarted)
         {
-            //_spriteRenderer.enabled = !_spriteRenderer.enabled; 
+            Sprite.enabled = false; 
             if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
             {
                 if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
@@ -66,7 +67,7 @@ public class Arrow : MonoBehaviour
                 }
             }else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
             {
-                if (GameObjectAccess.Player.transform.position.y < transform.position.y - 10)
+                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
                 {
                     StartArrow();
                 }
@@ -124,6 +125,12 @@ public class Arrow : MonoBehaviour
         //Destroy(gameObject);
     }
 
+    
+    private void DestroyArrow()
+    {
+        GameObjectAccess.KeysController.ReleaseUsedKey(_keyButton);
+        Destroy(gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D otherCollider) {
         if(otherCollider.tag == "Player") {
             Exit();

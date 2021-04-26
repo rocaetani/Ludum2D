@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 7569319684868775731, guid: f8ab70329dfc13e40b7f918e0f0d893e,
         type: 3}
       propertyPath: IsSwimUp
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ab70329dfc13e40b7f918e0f0d893e, type: 3}
@@ -1229,7 +1229,7 @@ PrefabInstance:
     - target: {fileID: 9195599851477793415, guid: 9a067a99253d209468ca6a363d661f9f,
         type: 3}
       propertyPath: IsSwimUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a067a99253d209468ca6a363d661f9f, type: 3}
