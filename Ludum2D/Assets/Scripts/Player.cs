@@ -134,7 +134,6 @@ public class Player : MonoBehaviour
         #endif
 
         int direction = Vector3.Dot(Vector3.right, heading) > 0? 1 : -1;
-        print(direction);
         if(direction != _sidewaysHeading) {
             _sidewaysHeading = direction;
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);

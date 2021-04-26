@@ -88,7 +88,6 @@ public class Bubble : MonoBehaviour
     private void Pop()
     {
         // TODO som de bolha estourando
-        Debug.Log("Pop");
         _popControl = true;
         _animator.SetBool("Pop", true);
         BubbleText.text = "";
