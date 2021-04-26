@@ -10,6 +10,7 @@ public class BackgroundChange : MonoBehaviour
 
     private Camera _mainCamera;
     private Transform _playerPosition;
+    private Vector3 _positionVector = Vector3.zero;
 
     void Start()
     {
@@ -25,6 +26,9 @@ public class BackgroundChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _positionVector.Set(GameObjectAccess.Player.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = _positionVector;
+
         Color from = colorChanges[0];
         Color to = colorChanges[colorChanges.Count - 1];
         float interpolateAmount = 0;
