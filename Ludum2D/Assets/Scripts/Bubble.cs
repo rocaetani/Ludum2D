@@ -92,6 +92,7 @@ public class Bubble : MonoBehaviour
         _popControl = true;
         _animator.SetBool("Pop", true);
         BubbleText.text = "";
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D otherCollider) {
