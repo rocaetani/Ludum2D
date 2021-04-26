@@ -2,18 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreController : MonoBehaviour
+public class ScoreController
 {
-    public float HighScore;
+    public static float HighScore = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
-    public bool PublishScore(float NewScore) //recebe a pontuação e retorna se foi recorde
+    public static bool PublishScore(float NewScore) //recebe a pontuação e retorna se foi recorde
     {
         if(NewScore > HighScore)
         {
@@ -22,6 +15,11 @@ public class ScoreController : MonoBehaviour
         }
         else
             return false;
+    }
+
+    public static float GiveHS()
+    {
+        return HighScore;
     }
 
 }
