@@ -229,6 +229,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5277484025842715944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &217208291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2952881448250501521, guid: 936093490b87c6f428727f49d373d181,
+    type: 3}
+  m_PrefabInstance: {fileID: 663914439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218303020
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +891,11 @@ PrefabInstance:
       propertyPath: winnerScreen
       value: 
       objectReference: {fileID: 1794719472}
+    - target: {fileID: 5368272319035200926, guid: 7b3d91504c19b3347bd9ed176fed9fba,
+        type: 3}
+      propertyPath: soundWin
+      value: 
+      objectReference: {fileID: 217208291}
     - target: {fileID: 7736575859740596728, guid: 7b3d91504c19b3347bd9ed176fed9fba,
         type: 3}
       propertyPath: m_Name
