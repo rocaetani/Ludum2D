@@ -28,7 +28,7 @@ public class Arrow : MonoBehaviour
 
     private bool _alreadyStarted ;
 
-
+    public bool IsSwimUp;
     void Start()
     {
         _alreadyStarted = false;
@@ -36,7 +36,7 @@ public class Arrow : MonoBehaviour
 
     public void GetButton()
     {
-        _keyButton = GameObjectAccess.KeysController.AddRandomKeyToBubble(_isLeft);
+        _keyButton = GameObjectAccess.KeysController.AddRandomUsedKey(_isLeft);
         Text.text = _keyButton.KeyToString();
 
     }
@@ -57,13 +57,24 @@ public class Arrow : MonoBehaviour
     {
         if (!_alreadyStarted)
         {
-            if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+            //_spriteRenderer.enabled = !_spriteRenderer.enabled; 
+            if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
             {
-                StartArrow();
+                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+                {
+                    StartArrow();
+                }
+            }else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
+            {
+                if (GameObjectAccess.Player.transform.position.y < transform.position.y - 10)
+                {
+                    StartArrow();
+                }
             }
+            
         }
 
-        if (!_exitControl)
+        if (!_exitControl & _alreadyStarted)
         {
 
 
@@ -95,7 +106,7 @@ public class Arrow : MonoBehaviour
 
                 if (Mathf.Abs(transform.position.y - GameObjectAccess.Player.transform.position.y) > 15)
                 {
-                    GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
+                    GameObjectAccess.KeysController.ReleaseUsedKey(_keyButton);
                     Destroy(gameObject);
                 }
 

@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class BubbleSpawn : MonoBehaviour
 {
-
+/*
     public List<int> HeightsToSpawn;
 
     public GameObject BubblePrefab;
@@ -74,5 +74,5 @@ public class BubbleSpawn : MonoBehaviour
             HeightsToSpawn.Remove(createHeight);
         }
     }
-    
+    */
 }

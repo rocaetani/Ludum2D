@@ -25,7 +25,6 @@ public class KeyButton : MonoBehaviour
 
     private bool _isPressed;
     private bool _isToPress;
-    private bool _isFastPress;
 
     private bool controlPlayerAir;
     
@@ -34,7 +33,6 @@ public class KeyButton : MonoBehaviour
     {
         controlPlayerAir = true;
         _isPressed = false;
-        _isFastPress = false;
         _isToPress = false;
         
 
@@ -102,6 +100,13 @@ public class KeyButton : MonoBehaviour
          //yield return new WaitForSeconds(3f);
 
         _isToPress = true;
+    }
+
+    public void UnsetToPress()
+    {
+        _isToPress = false;
+        ButtonImage.enabled = false;
+        Text.enabled = false;
     }
 
     public int IntKey()

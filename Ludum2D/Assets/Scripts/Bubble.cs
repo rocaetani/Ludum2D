@@ -11,7 +11,7 @@ public class Bubble : MonoBehaviour
 
     public Color colorPressed;
 
-    public SpriteRenderer Sprite;
+    private SpriteRenderer _spriteRenderer;
 
     public TMP_Text BubbleText;
 
@@ -33,30 +33,63 @@ public class Bubble : MonoBehaviour
 
     private bool _isLeft;
     
+    private bool _alreadyStarted ;
+
+    public bool IsSwimUp;
+
+
+    void Start()
+    {
+        _alreadyStarted = false;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    
     public void GetButton()
     {
-        _keyButton = GameObjectAccess.KeysController.AddRandomKeyToBubble(_isLeft);
+        _keyButton = GameObjectAccess.KeysController.AddRandomUsedKey(_isLeft);
         BubbleText.text = _keyButton.KeyToString();
 
     }
 
     // Start is called before the first frame update
-    void OnEnable()
+    void StartBubble()
     {
+        _alreadyStarted = true;
         _isLeft = transform.position.x < GameObjectAccess.Player.transform.position.x;
         _timeItStarted = Time.time;
         GetButton();
         _popControl = false;
-        Sprite.color = colorActive;
+        _spriteRenderer.enabled = !_spriteRenderer.enabled;
+        //SpriteRenderer.color = colorActive;
         _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!_popControl)
+        
+        if (!_alreadyStarted)
         {
-
+            //_spriteRenderer.enabled = !_spriteRenderer.enabled; 
+            if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
+            {
+                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+                {
+                    StartBubble();
+                }
+            }else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
+            {
+                
+                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+                {
+                    StartBubble();
+                }
+            }
+            
+        }
+        
+        if (!_popControl & _alreadyStarted)
+        {
 
             if (Input.GetKeyDown(_keyButton.key))
             {
@@ -97,7 +130,7 @@ public class Bubble : MonoBehaviour
 
     private void DestroyBubble()
     {
-        GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
+        GameObjectAccess.KeysController.ReleaseUsedKey(_keyButton);
         Destroy(gameObject);
     }
 
