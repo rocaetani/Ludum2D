@@ -1060,7 +1060,7 @@ PrefabInstance:
     - target: {fileID: 5735879990425932299, guid: 4bcd3177ad6c3a6408bf72d60eec516a,
         type: 3}
       propertyPath: m_Name
-      value: Waves (1)
+      value: Waves2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcd3177ad6c3a6408bf72d60eec516a, type: 3}
@@ -1231,7 +1231,7 @@ PrefabInstance:
     - target: {fileID: 5735879990425932299, guid: 4bcd3177ad6c3a6408bf72d60eec516a,
         type: 3}
       propertyPath: m_Name
-      value: Waves (2)
+      value: Waves3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcd3177ad6c3a6408bf72d60eec516a, type: 3}
@@ -2130,7 +2130,7 @@ PrefabInstance:
     - target: {fileID: 5735879990425932299, guid: 4bcd3177ad6c3a6408bf72d60eec516a,
         type: 3}
       propertyPath: m_Name
-      value: Waves
+      value: Waves1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcd3177ad6c3a6408bf72d60eec516a, type: 3}
