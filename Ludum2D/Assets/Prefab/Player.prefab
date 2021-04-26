@@ -123,10 +123,12 @@ MonoBehaviour:
   Score: 0
   SidewaysImpulse: 4
   loserScreen: {fileID: 0}
+  winnerScreen: {fileID: 0}
   anchor: {fileID: 0}
   caradoCara: {fileID: 0}
   musica1: {fileID: 0}
   musica2: {fileID: 0}
+  soundDeath: {fileID: 0}
   AirMaximum: 100
   AirAmount: 100
   DecreasePerSecond: 1
@@ -147,7 +149,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 4
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
