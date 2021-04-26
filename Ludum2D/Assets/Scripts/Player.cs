@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public GameObject musica2;
     public GameObject soundDeath;
     public GameObject soundWin;
+    public GameObject tecladoAparecendo;
 
     private Animator animationController;
 
@@ -151,6 +152,7 @@ public class Player : MonoBehaviour
     {
         animationController.SetBool("IsDed", true);
         playerState = PlayerState.Dead;
+        tecladoAparecendo.SetActive(false);
         musica1.SetActive(false);
         musica2.SetActive(false);
         DecreasePerSecondPerButton = 0;
@@ -161,6 +163,8 @@ public class Player : MonoBehaviour
 
     public void PlayerSurface()
     {
+        tecladoAparecendo.SetActive(false);
+        animationController.SetBool("IsWon", true);
         Velocity = 0;
         anchor.SetActive(false);
         musica1.SetActive(false);

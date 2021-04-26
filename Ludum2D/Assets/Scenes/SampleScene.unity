@@ -531,6 +531,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2035695538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &512486686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2589835439993032656, guid: f732a76b6554f864faba7af58032d7ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 5277484025842715944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &615844588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3133072522341722543, guid: d37ac71af1af47e458f00496264be6cb,
@@ -896,6 +902,11 @@ PrefabInstance:
       propertyPath: soundWin
       value: 
       objectReference: {fileID: 217208291}
+    - target: {fileID: 5368272319035200926, guid: 7b3d91504c19b3347bd9ed176fed9fba,
+        type: 3}
+      propertyPath: tecladoAparecendo
+      value: 
+      objectReference: {fileID: 512486686}
     - target: {fileID: 7736575859740596728, guid: 7b3d91504c19b3347bd9ed176fed9fba,
         type: 3}
       propertyPath: m_Name
