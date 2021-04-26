@@ -20,10 +20,12 @@
           <e p="KeyButton.cs" t="Include" />
           <e p="KeysController.cs" t="Include" />
           <e p="KeyToPressCreator.cs" t="Include" />
+          <e p="MainMenuButtons.cs" t="Include" />
           <e p="OxygenMeterController.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="ScoreController.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
+          <e p="YouLoseScreen.cs" t="Include" />
           <e p="YouWinScreen.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

@@ -107,6 +107,11 @@ public class KeyButton : MonoBehaviour
         _isToPress = false;
         ButtonImage.enabled = false;
         Text.enabled = false;
+
+        if (!controlPlayerAir)
+        {
+            GameObjectAccess.Player.DecreasePerSecond -= GameObjectAccess.Player.DecreasePerSecondPerButton;
+        }
     }
 
     public int IntKey()
