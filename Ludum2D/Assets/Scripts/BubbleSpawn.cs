@@ -10,6 +10,8 @@ public class BubbleSpawn : MonoBehaviour
     public List<int> HeightsToSpawn;
 
     public GameObject BubblePrefab;
+
+    public float DistanceToSpawn;
     
     // Start is called before the first frame update
     void Start()
@@ -49,17 +51,17 @@ public class BubbleSpawn : MonoBehaviour
         int createHeight = 0;
         foreach (int height in HeightsToSpawn)
         {
-            if (GameObjectAccess.Player.transform.position.y < height + 5)
+            if (GameObjectAccess.Player.transform.position.y < height + 10)
             {
                 int side = Random.Range(0, 2);
                 Vector3 position;
                 if (side == 0)
                 {
-                    position = new Vector3(-2.5f, height, 0);
+                    position = new Vector3(-DistanceToSpawn, height, 0);
                 }
                 else
                 {
-                    position = new Vector3(2.5f, height, 0);
+                    position = new Vector3(DistanceToSpawn, height, 0);
                 }
 
                 Instantiate(BubblePrefab, position, quaternion.identity);

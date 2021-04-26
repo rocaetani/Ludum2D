@@ -7,10 +7,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Arrow.cs" t="Include" />
           <e p="BackgroundChange.cs" t="Include" />
           <e p="Bubble.cs" t="Include" />
           <e p="BubbleSpawn.cs" t="Include" />
           <e p="CableLengthController.cs" t="Include" />
+          <e p="CoralColor.cs" t="Include" />
           <e p="DepthMeterController.cs" t="Include" />
           <e p="Extensions.cs" t="Include" />
           <e p="GameObjectAccess.cs" t="Include" />

@@ -1,23 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Bubble : MonoBehaviour
+
+public class Arrow : MonoBehaviour
 {
-    public Color colorActive;
-
-    public Color colorPressed;
-
     public SpriteRenderer Sprite;
 
-    public TMP_Text BubbleText;
+    public TMP_Text Text;
 
     private KeyButton _keyButton;
-
-    public float AdditionToAr;
 
     public int PressesNeeded;
 
@@ -27,58 +20,83 @@ public class Bubble : MonoBehaviour
 
     private float _timeItStarted;
 
-    private bool _popControl;
+    private bool _exitControl;
 
     private Animator _animator;
 
     private bool _isLeft;
-    
+
+    private bool _alreadyStarted ;
+
+
+    void Start()
+    {
+        _alreadyStarted = false;
+    }
+
     public void GetButton()
     {
         _keyButton = GameObjectAccess.KeysController.AddRandomKeyToBubble(_isLeft);
-        BubbleText.text = _keyButton.KeyToString();
+        Text.text = _keyButton.KeyToString();
 
     }
 
     // Start is called before the first frame update
-    void OnEnable()
+    void StartArrow()
     {
+        _alreadyStarted = true;
         _isLeft = transform.position.x < GameObjectAccess.Player.transform.position.x;
         _timeItStarted = Time.time;
         GetButton();
-        _popControl = false;
-        Sprite.color = colorActive;
+        _exitControl = false;
         _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!_popControl)
+        if (!_alreadyStarted)
+        {
+            if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+            {
+                StartArrow();
+            }
+        }
+
+        if (!_exitControl)
         {
 
 
             if (Input.GetKeyDown(_keyButton.key))
             {
-                _numberOfPresses++;
-                _animator.SetBool("Pressed", true);
+                //_animator.SetBool("Pressed", true);
                 GameObjectAccess.Player.MoveSideways(gameObject);
             }
             else
             {
-                _animator.SetBool("Pressed", false);
+                //_animator.SetBool("Pressed", false);
             }
 
-            if (!_popControl)
+            if (!_exitControl)
             {
+                if (GameObjectAccess.Player.transform.position.x < transform.position.x & _isLeft)
+                {
+                    Exit();
+                }
+                else if (GameObjectAccess.Player.transform.position.x > transform.position.x & !_isLeft)
+                {
+                    Exit();
+                }
+
                 if (TimeToDisappear < Time.time - _timeItStarted)
                 {
-                    Pop();
+                    Exit();
                 }
 
                 if (Mathf.Abs(transform.position.y - GameObjectAccess.Player.transform.position.y) > 15)
                 {
-                    DestroyBubble();
+                    GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
+                    Destroy(gameObject);
                 }
 
 
@@ -86,26 +104,20 @@ public class Bubble : MonoBehaviour
         }
     }
 
-    private void Pop()
+    private void Exit()
     {
         // TODO som de bolha estourando
-        _popControl = true;
-        _animator.SetBool("Pop", true);
-        BubbleText.text = "";
+        _exitControl = true;
+        //_animator.SetBool("Exit", true);
+        Text.text = "";
         //Destroy(gameObject);
-    }
-
-    private void DestroyBubble()
-    {
-        GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D otherCollider) {
         if(otherCollider.tag == "Player") {
-            GameObjectAccess.Player.AddAirAmount(AdditionToAr);
-            Pop();
+            Exit();
         }
     }
 
 }
+
