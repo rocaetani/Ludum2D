@@ -25,7 +25,6 @@ public class HUDController : MonoBehaviour
         if(!_isGoingUp && GameObjectAccess.Player.playerState == Player.PlayerState.GoingUp) {
             _isGoingUp = true;
 
-            print("Move");
             StartCoroutine(moveKeyboard());
         }
     }
