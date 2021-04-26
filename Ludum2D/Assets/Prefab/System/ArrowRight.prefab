@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7555330959490936002}
   - component: {fileID: 7230126516203534407}
   - component: {fileID: 3547977825961284265}
+  - component: {fileID: 6933839189689183767}
   m_Layer: 0
   m_Name: ArrowRight
   m_TagString: Untagged
@@ -100,6 +101,25 @@ MonoBehaviour:
   PressesNeeded: 3
   TimeToDisappear: 1000
   IsSwimUp: 0
+--- !u!95 &6933839189689183767
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630668417790435614}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af7c1c63278ea8940ba5924e851ad898, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9015508317673153896
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -3842612226631025888, guid: daf172892eae18849bbb9c4a8e143fed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -206,8 +226,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: daf172892eae18849bbb9c4a8e143fed, type: 2}
+  m_sharedMaterial: {fileID: -3842612226631025888, guid: daf172892eae18849bbb9c4a8e143fed,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

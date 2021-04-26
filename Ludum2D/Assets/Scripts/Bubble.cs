@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +31,7 @@ public class Bubble : MonoBehaviour
     private Animator _animator;
 
     private bool _isLeft;
-    
+
     private bool _alreadyStarted ;
 
     public bool IsSwimUp;
@@ -44,7 +43,7 @@ public class Bubble : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
     }
-    
+
     public void GetButton()
     {
         _keyButton = GameObjectAccess.KeysController.AddRandomUsedKey(_isLeft);
@@ -60,36 +59,36 @@ public class Bubble : MonoBehaviour
         _timeItStarted = Time.time;
         GetButton();
         _popControl = false;
-        
+
         //SpriteRenderer.color = colorActive;
-        
+
         _animator.SetBool("Active", true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (!_alreadyStarted)
         {
             _animator.SetBool("Active", false);
             if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
             {
-                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+                if (GameObjectAccess.Player.transform.position.y > transform.position.y - 10)
                 {
                     StartBubble();
                 }
             }else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
             {
-                
+
                 if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
                 {
                     StartBubble();
                 }
             }
-            
+
         }
-        
+
         if (!_popControl & _alreadyStarted)
         {
 
