@@ -32,7 +32,7 @@ public class HUDController : MonoBehaviour
     private IEnumerator moveKeyboard() {
         while(KeyboardTransform.anchoredPosition != _finalPosition) {
             yield return new WaitForFixedUpdate();
-            _lerpAmount += transitionSeconds * Time.fixedDeltaTime;
+            _lerpAmount += Time.fixedDeltaTime / transitionSeconds;
 
             KeyboardTransform.anchoredPosition = Vector2.Lerp(_initialPosition, _finalPosition, Utils.easeOutQuart(_lerpAmount));
         }

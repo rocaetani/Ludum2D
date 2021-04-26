@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2f91b2aecac9d46aa00932df11f1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSeconds: 2
+  transitionSeconds: 6
   cameraSlideAmount: 5.86
 --- !u!1001 &3126607516483691611
 PrefabInstance:

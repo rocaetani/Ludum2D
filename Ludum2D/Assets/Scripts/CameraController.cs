@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float transitionSeconds = 1;
+    public float transitionSeconds = 6;
     public float cameraSlideAmount = 5.86f;
 
     private bool _isGoingUp = false;
@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
     private IEnumerator slideCamera() {
         while(transform.localPosition != _finalPosition) {
             yield return new WaitForFixedUpdate();
-            _lerpAmount += transitionSeconds * Time.fixedDeltaTime;
+            _lerpAmount += Time.fixedDeltaTime / transitionSeconds;
 
             transform.localPosition = Vector3.Lerp(_initialPosition, _finalPosition, Utils.easeOutQuart(_lerpAmount));
         }
