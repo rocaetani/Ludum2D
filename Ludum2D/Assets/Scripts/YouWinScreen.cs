@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class YouWinScreen : MonoBehaviour
 {
@@ -26,4 +27,11 @@ public class YouWinScreen : MonoBehaviour
         TextLastHS.text = $"HighScore: {ScoreController.GiveHS():0.00} meters";
     }
 
+    public void nextLevel() {
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
+    }
+
+    public void exitLevel() {
+        SceneManager.LoadScene(0);
+    }
 }
