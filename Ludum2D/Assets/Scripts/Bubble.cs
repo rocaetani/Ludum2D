@@ -10,7 +10,7 @@ public class Bubble : MonoBehaviour
     public Color colorActive;
 
     public Color colorPressed;
-    
+
     public SpriteRenderer Sprite;
 
     public TMP_Text BubbleText;
@@ -36,7 +36,7 @@ public class Bubble : MonoBehaviour
         bool isLeft = transform.position.x < 0;
         _keyButton = GameObjectAccess.KeysController.AddRandomKeyToBubble(isLeft);
         BubbleText.text = _keyButton.KeyToString();
-        
+
     }
 
     // Start is called before the first frame update
@@ -54,18 +54,13 @@ public class Bubble : MonoBehaviour
     {
         if (!_popControl)
         {
-            
-            
+
+
             if (Input.GetKeyDown(_keyButton.key))
             {
-                _numberOfPresses += 1;
+                _numberOfPresses++;
                 _animator.SetBool("Pressed", true);
-                if (_numberOfPresses == PressesNeeded)
-                {
-                    GameObjectAccess.Player.AddAirAmount(AdditionToAr);
-                    
-                    Pop();
-                }
+                GameObjectAccess.Player.MoveSideways(gameObject);
             }
             else
             {
@@ -78,13 +73,13 @@ public class Bubble : MonoBehaviour
                 {
                     Pop();
                 }
-                
+
                 if (Mathf.Abs(transform.position.y - GameObjectAccess.Player.transform.position.y) > 5)
                 {
                     GameObjectAccess.KeysController.ReleaseKeyToPress(_keyButton);
                     Destroy(gameObject);
                 }
-                
+
 
             }
         }
@@ -92,11 +87,18 @@ public class Bubble : MonoBehaviour
 
     private void Pop()
     {
+        // TODO som de bolha estourando
         Debug.Log("Pop");
         _popControl = true;
         _animator.SetBool("Pop", true);
         BubbleText.text = "";
-
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D otherCollider) {
+        if(otherCollider.tag == "Player") {
+            GameObjectAccess.Player.AddAirAmount(AdditionToAr);
+            Pop();
+        }
+    }
+
 }
