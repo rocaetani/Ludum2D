@@ -18,4 +18,5 @@ public static class Utils
         return null;
     }
 
+    public static float easeOutQuart(float x) => 1 - Mathf.Pow(1 - Mathf.Clamp01(x), 4);
 }
