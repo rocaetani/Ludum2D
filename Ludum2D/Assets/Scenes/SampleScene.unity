@@ -1783,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicSecond
       objectReference: {fileID: 0}
+    - target: {fileID: 8568411091009040190, guid: 1f7e229c8d2fe2042923e0fed41d39c8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8568411091009040191, guid: 1f7e229c8d2fe2042923e0fed41d39c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2221,6 +2226,11 @@ PrefabInstance:
     - target: {fileID: 773536099166960250, guid: f732a76b6554f864faba7af58032d7ae,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891742201382493986, guid: f732a76b6554f864faba7af58032d7ae,
+        type: 3}
+      propertyPath: LastHS
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1308956144985579892, guid: f732a76b6554f864faba7af58032d7ae,
