@@ -62,7 +62,7 @@ public class Arrow : MonoBehaviour
             Sprite.enabled = false; 
             if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
             {
-                if (GameObjectAccess.Player.transform.position.y < transform.position.y + 10)
+                if (GameObjectAccess.Player.transform.position.y > transform.position.y - 10)
                 {
                     StartArrow();
                 }
