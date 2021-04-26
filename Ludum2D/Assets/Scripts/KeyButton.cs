@@ -13,11 +13,15 @@ public class KeyButton : MonoBehaviour
     public Image ButtonImage;
     public TMP_Text Text;
 
+
     public Sprite buttonActivated;
     public Sprite buttonNotPressed;
     public Sprite buttonPressed;
 
     public Sprite buttonActivating;
+    
+    public float timePiscando;
+    public int numPiscadas;
 
     private bool _isPressed;
     private bool _isToPress;
@@ -32,6 +36,7 @@ public class KeyButton : MonoBehaviour
         _isPressed = false;
         _isFastPress = false;
         _isToPress = false;
+        
 
         ButtonImage = GetComponentInChildren<Image>();
 
@@ -82,20 +87,20 @@ public class KeyButton : MonoBehaviour
 
     IEnumerator IsComming()
     {
+        
         ButtonImage.enabled = true;
         Text.enabled = true; //da pra tirar o texto aqui tbm se for melhor
+        for(int i = 0; i < numPiscadas; i++)
+        {
         ButtonImage.sprite = buttonActivating;
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(timePiscando);
         ButtonImage.sprite = buttonActivated;
-        yield return new WaitForSeconds(0.35f);
-        ButtonImage.sprite = buttonActivating;
-        yield return new WaitForSeconds(0.35f);
-        ButtonImage.sprite = buttonActivated;
-        yield return new WaitForSeconds(0.35f);        
-        ButtonImage.sprite = buttonActivating;
-        yield return new WaitForSeconds(0.35f);
-        ButtonImage.sprite = buttonActivated;
-        yield return new WaitForSeconds(0.35f); 
+        yield return new WaitForSeconds(timePiscando);
+        }
+        
+
+         //yield return new WaitForSeconds(3f);
+
         _isToPress = true;
     }
 
