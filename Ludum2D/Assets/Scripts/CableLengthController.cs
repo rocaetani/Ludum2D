@@ -22,6 +22,7 @@ public class CableLengthController : MonoBehaviour
 
             Vector3 lastLocal = lastCable.transform.localPosition;
 
+            newCable.transform.localScale = lastCable.transform.lossyScale;
             newCable.transform.SetParent(lastCable.transform.parent);
             newCable.transform.localPosition = new Vector3(lastLocal.x, lastLocal.y + cableDistance, lastLocal.z);
 
