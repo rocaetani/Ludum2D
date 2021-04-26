@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public GameObject musica1;
     public GameObject musica2;
     public GameObject soundDeath;
+    public GameObject soundWin;
 
     private Animator animationController;
 
@@ -152,13 +153,23 @@ public class Player : MonoBehaviour
         playerState = PlayerState.Dead;
         musica1.SetActive(false);
         musica2.SetActive(false);
+        DecreasePerSecondPerButton = 0;
+        DecreasePerSecond = 0;
         soundDeath.SetActive(true);
         StartCoroutine(WaitForDeath());
     }
 
     public void PlayerSurface()
     {
+        Velocity = 0;
         anchor.SetActive(false);
+        musica1.SetActive(false);
+        musica2.SetActive(false);
+        soundWin.SetActive(true);
+        caradoCara.SetActive(false);
+        anchor.SetActive(false);
+        DecreasePerSecondPerButton = 0;
+        DecreasePerSecond = 0;
         winnerScreen.SetActive(true);
 
     }
@@ -169,6 +180,8 @@ public class Player : MonoBehaviour
         caradoCara.SetActive(false);
         anchor.SetActive(false);
         soundDeath.SetActive(true);
+        GameObjectAccess.MainCamera.gameObject.transform.parent = null;
+        _rb.gravityScale = 1;
         DeactivateKeys();
         Debug.Log("Implementar aqui a morte do personagem");
     }
@@ -208,7 +221,7 @@ public class Player : MonoBehaviour
         musica1.SetActive(false);
         musica2.SetActive(true);
 
-        Score = transform.position.y;
+        Score = -transform.position.y;
 
         GameObject attachedCable = gameObject.findChildWithTag("Cable");
         if(attachedCable != null) {
@@ -216,4 +229,6 @@ public class Player : MonoBehaviour
             attachedCable.transform.parent = null;
         }
     }
+
+    
 }

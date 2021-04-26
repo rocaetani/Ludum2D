@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 5838927064300533718}
   - component: {fileID: 6784490159607328633}
   - component: {fileID: 8954424501277818806}
+  - component: {fileID: 8034336688726534141}
   m_Layer: 5
   m_Name: Screen_YouWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5838927064300533718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78,6 +79,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8034336688726534141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086652751887885761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99a42805e97ac4489ff7d4182d16cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinMessage: {fileID: 618636557221750345}
 --- !u!1 &2945046795470524693
 GameObject:
   m_ObjectHideFlags: 0
