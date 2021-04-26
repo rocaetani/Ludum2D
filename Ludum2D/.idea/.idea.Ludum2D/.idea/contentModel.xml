@@ -14,13 +14,13 @@
           <e p="CableLengthController.cs" t="Include" />
           <e p="CoralColor.cs" t="Include" />
           <e p="DepthMeterController.cs" t="Include" />
-          <e p="Extensions.cs" t="Include" />
           <e p="GameObjectAccess.cs" t="Include" />
           <e p="KeyButton.cs" t="Include" />
           <e p="KeysController.cs" t="Include" />
           <e p="KeyToPressCreator.cs" t="Include" />
           <e p="OxygenMeterController.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

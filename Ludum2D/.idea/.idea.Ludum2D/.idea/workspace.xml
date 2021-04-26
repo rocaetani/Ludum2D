@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc1139b-63f0-4db1-8ba4-b98eb1492f45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Araia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Araia.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ludum2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Bubble/BubblePopping.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Bubble/BubblePopping.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BubbleSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BubbleSpawn.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bubble.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="92" column="39" lean-forward="true" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+            <state relative-caret-position="290">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <marker date="1619416817776" expanded="false" signature="6:143" ph="..." />
                 <marker date="1619416817776" expanded="true" signature="180:2506" ph="{...}" />
@@ -50,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BubbleSpawn.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <marker date="1619415597762" expanded="false" signature="6:138" ph="..." />
                 <marker date="1619415597762" expanded="true" signature="180:1862" ph="{...}" />
@@ -74,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="108" column="39" lean-forward="true" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+            <state relative-caret-position="150">
+              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               <folding>
                 <marker date="1619416659544" expanded="true" signature="6:91" ph="..." />
                 <marker date="1619416659544" expanded="true" signature="128:2823" ph="{...}" />
@@ -427,12 +419,12 @@
       <option name="presentableId" value="Default" />
       <updated>1619235301689</updated>
       <workItem from="1619235306215" duration="38499000" />
-      <workItem from="1619368728343" duration="14024000" />
+      <workItem from="1619368728343" duration="14443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74216000" />
+    <option name="totallyTimeSpent" value="74635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,7 +437,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23228556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -455,7 +446,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991462" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1086,33 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BubbleSpawn.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <marker date="1619415597762" expanded="false" signature="6:138" ph="..." />
-            <marker date="1619415597762" expanded="true" signature="180:1862" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="367:509" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="409:475" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="542:1013" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="595:1007" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="713:807" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="828:922" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1076:1855" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1160:1748" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1246:1738" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1372:1481" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1502:1610" ph="{...}" />
-            <marker date="1619415597762" expanded="true" signature="1780:1849" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="108" column="39" lean-forward="true" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        <state relative-caret-position="150">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
           <folding>
             <marker date="1619416659544" expanded="true" signature="6:91" ph="..." />
             <marker date="1619416659544" expanded="true" signature="128:2823" ph="{...}" />
@@ -1137,10 +1105,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BubbleSpawn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <marker date="1619415597762" expanded="false" signature="6:138" ph="..." />
+            <marker date="1619415597762" expanded="true" signature="180:1862" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="367:509" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="409:475" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="542:1013" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="595:1007" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="713:807" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="828:922" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1076:1855" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1160:1748" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1246:1738" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1372:1481" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1502:1610" ph="{...}" />
+            <marker date="1619415597762" expanded="true" signature="1780:1849" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bubble.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="92" column="39" lean-forward="true" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+        <state relative-caret-position="290">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
           <folding>
             <marker date="1619416817776" expanded="false" signature="6:143" ph="..." />
             <marker date="1619416817776" expanded="true" signature="180:2506" ph="{...}" />
