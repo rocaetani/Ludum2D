@@ -51,6 +51,7 @@ public class Arrow : MonoBehaviour
         _exitControl = false;
         Sprite.enabled = true;
         _animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -120,7 +121,7 @@ public class Arrow : MonoBehaviour
     {
         // TODO som de bolha estourando
         _exitControl = true;
-        //_animator.SetBool("Exit", true);
+        _animator.SetBool("GoToSide", true);
         Text.text = "";
         //Destroy(gameObject);
     }
@@ -131,6 +132,7 @@ public class Arrow : MonoBehaviour
         GameObjectAccess.KeysController.ReleaseUsedKey(_keyButton);
         Destroy(gameObject);
     }
+    
     private void OnTriggerEnter2D(Collider2D otherCollider) {
         if(otherCollider.tag == "Player") {
             Exit();
