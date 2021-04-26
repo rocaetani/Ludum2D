@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private Vector2 _direction;
     private int _sidewaysHeading;
     private Rigidbody2D _rb;
+    private Coroutine _sidewaysMovement = null;
 
     [Header("Game Objects")]
     public GameObject loserScreen;
@@ -71,7 +72,6 @@ public class Player : MonoBehaviour
         }
 
         Move();
-        MoveSideways();
     }
 
     void Update()
@@ -114,28 +114,38 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void MoveSideways()
+    public void MoveSideways(GameObject towards)
     {
-        int direction = 0;
-        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
-            direction = -1;
-        } else if(Input.GetKeyDown(KeyCode.RightArrow)) {
-            direction = 1;
-        }
-
-        if(direction != 0) {
-            animationController.SetBool("MovingSideways", true);
-            if(direction != _sidewaysHeading) {
-                _sidewaysHeading = direction;
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
-
-            _rb.AddForce(SidewaysImpulse * direction * Vector2.right, ForceMode2D.Impulse);
-        } else {
-            animationController.SetBool("MovingSideways", false);
+        if(_sidewaysMovement == null) {
+            _sidewaysMovement = StartCoroutine(fixedUpdateMoveSideways(towards.transform.position));
         }
 
     }
+
+    private IEnumerator fixedUpdateMoveSideways(Vector3 towards) {
+        yield return new WaitForFixedUpdate();
+
+        animationController.SetBool("MovingSideways", true);
+
+        Vector3 heading = towards.x < _rb.transform.position.x? Vector3.left : Vector3.right;
+
+        #if UNITY_EDITOR
+        Debug.DrawRay(_rb.transform.position, heading, Color.yellow, 1);
+        #endif
+
+        int direction = Vector3.Dot(Vector3.right, heading) > 0? 1 : -1;
+        print(direction);
+        if(direction != _sidewaysHeading) {
+            _sidewaysHeading = direction;
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+
+        _rb.AddForce(SidewaysImpulse * direction * Vector2.right, ForceMode2D.Impulse);
+
+        _sidewaysMovement = null;
+    }
+
+    public void stopSidewaysAnimation() => animationController.SetBool("MovingSideways", false);
 
     public void PlayerDead()
     {
@@ -151,7 +161,7 @@ public class Player : MonoBehaviour
     {
         anchor.SetActive(false);
         winnerScreen.SetActive(true);
-        
+
     }
 
     public void GameOver()
