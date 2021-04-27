@@ -207,17 +207,6 @@ public class Player : MonoBehaviour
         return playerState == PlayerState.GoingUp? 1 : -1;
     }
 
-    void OnGUI()
-    {
-        GUI.color = Color.red;
-
-        GUI.Label(new Rect(100, 10, 150, 100), AirAmount + "");
-
-        GUI.Label(new Rect(100, 20, 150, 100), Time.time + "");
-
-        GUI.Label(new Rect(100, 30, 150, 100), transform.position.y + "");
-    }
-
     private void startMovingUp() {
         playerState = PlayerState.GoingUp;
         _direction = Vector3.up;
