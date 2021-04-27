@@ -137,8 +137,11 @@ public class Bubble : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otherCollider) {
         if(otherCollider.tag == "Player") {
-            GameObjectAccess.Player.AddAirAmount(AdditionToAr);
-            Pop();
+            if (_alreadyStarted)
+            {
+                GameObjectAccess.Player.AddAirAmount(AdditionToAr);
+                Pop();
+            }
         }
     }
 

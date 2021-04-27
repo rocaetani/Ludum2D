@@ -135,7 +135,10 @@ public class Arrow : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D otherCollider) {
         if(otherCollider.tag == "Player") {
-            Exit();
+            if (_alreadyStarted)
+            {
+                Exit();
+            }
         }
     }
 
