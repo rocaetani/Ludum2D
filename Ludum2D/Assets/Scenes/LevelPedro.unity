@@ -3284,6 +3284,11 @@ PrefabInstance:
       propertyPath: IsSwimUp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7569319684868775731, guid: f8ab70329dfc13e40b7f918e0f0d893e,
+        type: 3}
+      propertyPath: AdditionToAr
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ab70329dfc13e40b7f918e0f0d893e, type: 3}
 --- !u!1 &226829919
