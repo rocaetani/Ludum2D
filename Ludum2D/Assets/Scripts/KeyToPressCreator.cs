@@ -11,26 +11,29 @@ public class KeyToPressCreator : MonoBehaviour
 
     void Update()
     {
+        float playerDistance = Mathf.Abs(GameObjectAccess.Player.transform.position.y - transform.position.y);
         if (IsSwimUp & GameObjectAccess.Player.GoingDirection() == 1)
         {
-            if (GameObjectAccess.Player.transform.position.y > transform.position.y)
+
+            if (GameObjectAccess.Player.transform.position.y > transform.position.y && playerDistance <= 1)
             {
                 Execute();
             }
-        }else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
+        }
+        else if(!IsSwimUp & GameObjectAccess.Player.GoingDirection() == -1)
         {
-            if (GameObjectAccess.Player.transform.position.y < transform.position.y)
+            if (GameObjectAccess.Player.transform.position.y < transform.position.y && playerDistance <= 1)
             {
                 Execute();
             }
         }
 
-        
+
     }
 
     private void Execute()
     {
-        
+
             if (!CreateOrDestroy)
             {
                 GameObjectAccess.KeysController.AddRandomKeyToPress();
@@ -42,7 +45,7 @@ public class KeyToPressCreator : MonoBehaviour
                 Destroy(this);
             }
 
-        
+
     }
 
 }
